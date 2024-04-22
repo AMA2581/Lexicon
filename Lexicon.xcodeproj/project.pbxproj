@@ -244,20 +244,30 @@
 		2E5F48872BD68C9800C7A62F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TAPI_LANGUAGE = "objective-c++";
+				TAPI_LANGUAGE_STANDARD = "c++20";
 			};
 			name = Debug;
 		};
 		2E5F48882BD68C9800C7A62F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TAPI_LANGUAGE = "objective-c++";
+				TAPI_LANGUAGE_STANDARD = "c++20";
 			};
 			name = Release;
 		};
