@@ -6,6 +6,7 @@
 *.lo
 *.o
 *.obj
+Lexicon/main
 
 # Precompiled Headers
 *.gch
@@ -32,10 +33,6 @@
 *.app
 *.ipa
 
-# HTML/CSS testing files
-*.html
-*.css
-
 # IDEs
 .vscode
 .idea
@@ -46,22 +43,22 @@
 
 # Xcode files
 xcuserdata
-xcode/.build/
-xcode/*.xcscmblueprint
-xcode/*.xccheckout
-xcode/build/
-xcode/debug/
-xcode/DerivedData/
-xcode/*.moved-aside
-xcode/*.pbxuser
-xcode/!default.pbxuser
-xcode/*.mode1v3
-xcode/!default.mode1v3
-xcode/*.mode2v3
-xcode/!default.mode2v3
-xcode/*.perspectivev3
-xcode/!default.perspectivev3
+.build/
+*.xcscmblueprint
+*.xccheckout
+build/
+debug/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
 ## Obj-C/Swift specific
-xcode/*.hmap
+*.hmap
 
 build
