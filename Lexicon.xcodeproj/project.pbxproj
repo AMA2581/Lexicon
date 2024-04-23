@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E0ECF952BD7C2FD0068048C /* FileChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileChecker.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		2E0ECF902BD7A5D70068048C /* cran.qry */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cran.qry; sourceTree = "<group>"; };
 		2E0ECF912BD7A5D70068048C /* cranqrel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cranqrel; sourceTree = "<group>"; };
 		2E0ECF922BD7A5D70068048C /* cranqrel.readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cranqrel.readme; sourceTree = "<group>"; };
+		2E0ECF942BD7C2FD0068048C /* FileChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileChecker.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -93,9 +95,10 @@
 		2E5F48912BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXGroup;
 			children = (
+				2E5F48922BD699A800C7A62F /* main.swift */,
+				2E0ECF942BD7C2FD0068048C /* FileChecker.swift */,
 				2E0ECF932BD7A5D70068048C /* cran */,
 				2E0ECF8E2BD7A5680068048C /* cacm */,
-				2E5F48922BD699A800C7A62F /* main.swift */,
 			);
 			path = Lexicon;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
+				2E0ECF952BD7C2FD0068048C /* FileChecker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

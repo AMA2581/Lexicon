@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
+var fileChecker = FileChecker()
 
