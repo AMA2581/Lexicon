@@ -23,6 +23,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E0ECF882BD7A5680068048C /* cacm.all */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cacm.all; sourceTree = "<group>"; };
+		2E0ECF892BD7A5680068048C /* cite.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cite.info; sourceTree = "<group>"; };
+		2E0ECF8A2BD7A5680068048C /* common_words */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common_words; sourceTree = "<group>"; };
+		2E0ECF8B2BD7A5680068048C /* qrels.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = qrels.text; sourceTree = "<group>"; };
+		2E0ECF8C2BD7A5680068048C /* query.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = query.text; sourceTree = "<group>"; };
+		2E0ECF8D2BD7A5680068048C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		2E0ECF8F2BD7A5D70068048C /* cran.all.1400 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cran.all.1400; sourceTree = "<group>"; };
+		2E0ECF902BD7A5D70068048C /* cran.qry */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cran.qry; sourceTree = "<group>"; };
+		2E0ECF912BD7A5D70068048C /* cranqrel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cranqrel; sourceTree = "<group>"; };
+		2E0ECF922BD7A5D70068048C /* cranqrel.readme */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cranqrel.readme; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -39,6 +49,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0ECF8E2BD7A5680068048C /* cacm */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ECF882BD7A5680068048C /* cacm.all */,
+				2E0ECF892BD7A5680068048C /* cite.info */,
+				2E0ECF8A2BD7A5680068048C /* common_words */,
+				2E0ECF8B2BD7A5680068048C /* qrels.text */,
+				2E0ECF8C2BD7A5680068048C /* query.text */,
+				2E0ECF8D2BD7A5680068048C /* README */,
+			);
+			path = cacm;
+			sourceTree = "<group>";
+		};
+		2E0ECF932BD7A5D70068048C /* cran */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ECF8F2BD7A5D70068048C /* cran.all.1400 */,
+				2E0ECF902BD7A5D70068048C /* cran.qry */,
+				2E0ECF912BD7A5D70068048C /* cranqrel */,
+				2E0ECF922BD7A5D70068048C /* cranqrel.readme */,
+			);
+			path = cran;
+			sourceTree = "<group>";
+		};
 		2E5F48762BD68C9800C7A62F = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +93,8 @@
 		2E5F48912BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXGroup;
 			children = (
+				2E0ECF932BD7A5D70068048C /* cran */,
+				2E0ECF8E2BD7A5680068048C /* cacm */,
 				2E5F48922BD699A800C7A62F /* main.swift */,
 			);
 			path = Lexicon;
