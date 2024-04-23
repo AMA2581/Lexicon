@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E5F48832BD68C9800C7A62F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48822BD68C9800C7A62F /* main.cpp */; };
+		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E5F487D2BD68C9800C7A62F /* CopyFiles */ = {
+		2E5F488E2BD699A800C7A62F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,12 +23,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E5F487F2BD68C9800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E5F48822BD68C9800C7A62F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E5F487C2BD68C9800C7A62F /* Frameworks */ = {
+		2E5F488D2BD699A800C7A62F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +42,8 @@
 		2E5F48762BD68C9800C7A62F = {
 			isa = PBXGroup;
 			children = (
-				2E5F48812BD68C9800C7A62F /* Lexicon */,
+				2E5F48892BD694C400C7A62F /* .gitignore */,
+				2E5F48912BD699A800C7A62F /* Lexicon */,
 				2E5F48802BD68C9800C7A62F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,15 +51,15 @@
 		2E5F48802BD68C9800C7A62F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F487F2BD68C9800C7A62F /* Lexicon */,
+				2E5F48902BD699A800C7A62F /* Lexicon */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E5F48812BD68C9800C7A62F /* Lexicon */ = {
+		2E5F48912BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F48822BD68C9800C7A62F /* main.cpp */,
+				2E5F48922BD699A800C7A62F /* main.swift */,
 			);
 			path = Lexicon;
 			sourceTree = "<group>";
@@ -65,13 +67,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E5F487E2BD68C9800C7A62F /* Lexicon */ = {
+		2E5F488F2BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E5F48862BD68C9800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */;
+			buildConfigurationList = 2E5F48942BD699A800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */;
 			buildPhases = (
-				2E5F487B2BD68C9800C7A62F /* Sources */,
-				2E5F487C2BD68C9800C7A62F /* Frameworks */,
-				2E5F487D2BD68C9800C7A62F /* CopyFiles */,
+				2E5F488C2BD699A800C7A62F /* Sources */,
+				2E5F488D2BD699A800C7A62F /* Frameworks */,
+				2E5F488E2BD699A800C7A62F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -79,7 +81,7 @@
 			);
 			name = Lexicon;
 			productName = Lexicon;
-			productReference = 2E5F487F2BD68C9800C7A62F /* Lexicon */;
+			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -89,9 +91,10 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					2E5F487E2BD68C9800C7A62F = {
+					2E5F488F2BD699A800C7A62F = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -109,17 +112,17 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E5F487E2BD68C9800C7A62F /* Lexicon */,
+				2E5F488F2BD699A800C7A62F /* Lexicon */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E5F487B2BD68C9800C7A62F /* Sources */ = {
+		2E5F488C2BD699A800C7A62F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5F48832BD68C9800C7A62F /* main.cpp in Sources */,
+				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,7 +248,7 @@
 			};
 			name = Release;
 		};
-		2E5F48872BD68C9800C7A62F /* Debug */ = {
+		2E5F48952BD699A800C7A62F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
@@ -255,12 +258,13 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TAPI_LANGUAGE = "objective-c++";
-				TAPI_LANGUAGE_STANDARD = "c++20";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2E5F48882BD68C9800C7A62F /* Release */ = {
+		2E5F48962BD699A800C7A62F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
@@ -270,8 +274,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TAPI_LANGUAGE = "objective-c++";
-				TAPI_LANGUAGE_STANDARD = "c++20";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -287,11 +291,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E5F48862BD68C9800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */ = {
+		2E5F48942BD699A800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E5F48872BD68C9800C7A62F /* Debug */,
-				2E5F48882BD68C9800C7A62F /* Release */,
+				2E5F48952BD699A800C7A62F /* Debug */,
+				2E5F48962BD699A800C7A62F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
