@@ -7,9 +7,11 @@
 
 import Foundation
 
-var fileChecker = FileChecker()
+var fileReader = FileReader()
 
-let files = fileChecker.fileUrlGetter(datasetFolderUrl: URL(string: "/Users/ama25/Documents/Lexicon/Lexicon/cacm/"))
+let files = fileReader.fileUrlGetter(datasetFolderUrl: URL(string: "/Users/ama25/Documents/Lexicon/Lexicon/cacm/"))
 
-print(files)
+let content = fileReader.readFile(fileURL: files[1])
+
+print(content)
 

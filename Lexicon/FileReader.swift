@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct FileChecker {
+struct FileReader {
     
     func fileUrlGetter(datasetFolderUrl DFURL: URL?) -> [URL] {
         let datasetFolderURL = DFURL
@@ -39,5 +39,18 @@ struct FileChecker {
         } catch {
             fatalError("\(error)")
         }
+    }
+    
+    func readFile(fileURL: URL) -> String {
+        var out: String
+        
+        //reading
+        do {
+            out = try String(contentsOf: fileURL, encoding: .utf8)
+        } catch {
+            fatalError("\(error)")
+        }
+        
+        return out
     }
 }
