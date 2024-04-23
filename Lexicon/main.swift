@@ -7,5 +7,5 @@
 
 import Foundation
 
-var fileChecker = FileChecker()
+var fileChecker = FileChecker(datasetFolderUrl: URL(string: "/Users/ama25/Documents/Lexicon/Lexicon/cacm/"))
 
