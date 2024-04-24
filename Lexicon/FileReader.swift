@@ -41,7 +41,7 @@ struct FileReader {
         }
     }
     
-    func readFile(fileURL: URL) -> String {
+    func readFile(fileURL: URL) -> NSString {
         var out: String
         
         //reading
@@ -51,6 +51,6 @@ struct FileReader {
             fatalError("\(error)")
         }
         
-        return out
+        return NSString(string: out)
     }
 }
