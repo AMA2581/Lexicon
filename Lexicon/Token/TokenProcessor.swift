@@ -17,7 +17,17 @@ class TokenProcessor {
         return buffer.hasPrefix(".")
     }
     
-    func typeCheck() {
-        
+    func typeCheck(_ input: String) -> TokenType {
+        // TODO: add .B .A .N .W .X STOP_WORDS DID QID
+        switch input {
+        case "I":
+            return TokenType.index
+        case "T":
+            return TokenType.text
+        case "A":
+            return TokenType.author
+        default:
+            return TokenType.text
+        }
     }
 }
