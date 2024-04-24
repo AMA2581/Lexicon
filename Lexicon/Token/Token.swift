@@ -23,6 +23,7 @@ class Token {
         self.token = input
     }
     
+    /// For getting the token
     func getToken() -> String {
         return token
     }
