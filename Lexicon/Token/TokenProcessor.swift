@@ -9,6 +9,12 @@ import Foundation
 
 class TokenProcessor {
     
+    func process(_ input: String) -> Token {
+        var output: Token
+        
+        return output
+    }
+    
     /// This function is for checking if the token has "." in the beginning
     /// If it has it it's a type not a token
     func prefixCheck(_ input: String) -> Bool {

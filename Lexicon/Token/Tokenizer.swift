@@ -16,8 +16,8 @@ class Tokenizer {
         
         for rawData in rawDatas {
             var buffer = rawData
-            
-            output.append(Token(token: buffer, type: TokenType.text))
+            bufferT = tokenProceessor.process(buffer)
+            output.append(bufferT)
         }
         
         return output
