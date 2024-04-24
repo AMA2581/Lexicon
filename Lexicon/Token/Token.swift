@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Token {
+struct Token {
     private var token: String
     
     init(token: String) {
@@ -16,11 +16,6 @@ class Token {
     
     init() {
         self.token = ""
-    }
-    
-    /// For setting or overwriting the token
-    func setToken(_ input: String) {
-        self.token = input
     }
     
     /// For getting the token
