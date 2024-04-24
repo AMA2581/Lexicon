@@ -8,7 +8,6 @@
 import Foundation
 
 class TokenProcessor {
-    // TODO: use NSString.hasPrefix(".") to get the token type
     
     /// This function is for checking if the token has "." in the beginning
     /// If it has it it's a type not a token
