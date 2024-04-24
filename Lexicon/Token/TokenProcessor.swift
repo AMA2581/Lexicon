@@ -8,5 +8,6 @@
 import Foundation
 
 class TokenProcessor {
+    // TODO: use NSString.hasPrefix(".") to get the token type
     
 }
