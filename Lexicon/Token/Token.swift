@@ -9,13 +9,16 @@ import Foundation
 
 struct Token {
     private var token: String
+    let type: TokenType
     
-    init(token: String) {
+    init(token: String, type: TokenType) {
         self.token = token
+        self.type = type
     }
     
     init() {
         self.token = ""
+        self.type = TokenType.text
     }
     
     /// For getting the token
