@@ -8,7 +8,7 @@
 import Foundation
 
 enum TokenType {
-    case index
-    case text
-    case author
+    case index  // .I
+    case text   // .T
+    case author // .A
 }
