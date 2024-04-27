@@ -35,4 +35,8 @@ class Tokenizer {
         
         return out
     }
+    
+    func setStopWord(string input: String) {
+        tokenProceessor.stopWords = input.components(separatedBy: "\n")
+    }
 }

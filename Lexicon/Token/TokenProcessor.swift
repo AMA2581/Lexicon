@@ -8,6 +8,7 @@
 import Foundation
 
 class TokenProcessor {
+    var stopWords: [String] = []
     var typeFlag = TokenType.title
     
     func process(_ input: String) -> Token {
