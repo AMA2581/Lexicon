@@ -16,10 +16,10 @@ class TokenProcessor {
         var output: Token
         
         for char in input {
-            if char != "(" || 
-                char != ")" ||
-                char != "." ||
-                char != "," {
+            if char < Character(UnicodeScalar(65)) ||
+                char > Character(UnicodeScalar(90)) ||
+                char < Character(UnicodeScalar(97)) ||
+                char > Character(UnicodeScalar(122)) {
                 outstr += String(char)
             }
         }
