@@ -15,7 +15,10 @@ class TokenProcessor {
         var output: Token
         
         for char in input {
-            if char != "(" || char != ")" || char != "." || char != "," {
+            if char != "(" || 
+                char != ")" ||
+                char != "." ||
+                char != "," {
                 outstr += String(char)
             }
         }
