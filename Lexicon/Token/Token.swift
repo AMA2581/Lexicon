@@ -18,7 +18,12 @@ struct Token {
     
     init() {
         self.token = ""
-        self.type = TokenType.text
+        self.type = TokenType.title
+    }
+    
+    /// For updating token. Be cautious with it.
+    mutating func updateToken(_ input: String) {
+        self.token = input
     }
     
     /// For getting the token
