@@ -43,6 +43,7 @@
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2ED94DC02BDCEA9000E6CB12 /* StopWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWord.swift; sourceTree = "<group>"; };
 		2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lexicon.entitlements; sourceTree = "<group>"; };
+		2ED94DC72BDCFE0C00E6CB12 /* PyStopWord.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyStopWord.py; sourceTree = "<group>"; };
 		2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProcessor.swift; sourceTree = "<group>"; };
 		2EF10D9E2BD90C3900FEE478 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
@@ -118,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				2ED94DC02BDCEA9000E6CB12 /* StopWord.swift */,
+				2ED94DC72BDCFE0C00E6CB12 /* PyStopWord.py */,
 			);
 			path = StopWord;
 			sourceTree = "<group>";

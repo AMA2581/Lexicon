@@ -16,10 +16,14 @@ let content = fileReader.readFile(fileURL: files[1])
 
 var tokens = tokenizer.tokenizer(data: content)
 
-for token in tokens {
-    print(token.getToken())
-    print(token.type)
-    print("-------------------------------")
-}
+var stopWord = StopWord()
+
+//for token in tokens {
+//    print(token.getToken())
+//    print(token.type)
+//    print("-------------------------------")
+//}
+
+print("\(stopWord.runPython())")
 
 //print(content)
