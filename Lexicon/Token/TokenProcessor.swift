@@ -15,7 +15,10 @@ class TokenProcessor {
         var output: Token
         
         for char in input {
-            if char != "(" || char != ")" || char != "." || char != "," {
+            if char != "(" || 
+                char != ")" ||
+                char != "." ||
+                char != "," {
                 outstr += String(char)
             }
         }
@@ -45,6 +48,8 @@ class TokenProcessor {
             typeFlag = TokenType.bibliography
         case ".W":
             typeFlag = TokenType.text
+        case ".N":
+            typeFlag = TokenType.date
         default:
             typeFlag = TokenType.title
         }
