@@ -12,12 +12,15 @@ class Tokenizer {
     
     func tokenizer(data input: String) -> [Token] {
         var output: [Token] = []
-        var rawDatas = input.components(separatedBy: " ")
+        let rawDatas = input.components(separatedBy: " ")
         
         for rawData in rawDatas {
             var buffer = rawData
-            bufferT = tokenProceessor.process(buffer)
-            output.append(bufferT)
+            if tokenProceessor.prefixCheck(buffer) {
+                tokenProceessor.typeCheck(buffer)
+            } else {
+                output.append(tokenProceessor.process(buffer))
+            }
         }
         
         return output

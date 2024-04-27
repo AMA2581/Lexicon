@@ -10,6 +10,6 @@ import Foundation
 enum TokenType {
     // TODO: add .B .A .N .W .X STOP_WORDS DID QID
     case index  // .I
-    case text   // .T
+    case title  // .T
     case author // .A
 }

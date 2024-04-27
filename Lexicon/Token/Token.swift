@@ -18,7 +18,7 @@ struct Token {
     
     init() {
         self.token = ""
-        self.type = TokenType.text
+        self.type = TokenType.title
     }
     
     /// For updating token. Be cautious with it.

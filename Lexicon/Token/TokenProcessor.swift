@@ -8,9 +8,19 @@
 import Foundation
 
 class TokenProcessor {
+    var typeFlag = TokenType.title
     
     func process(_ input: String) -> Token {
+        var outstr = ""
         var output: Token
+        
+        for char in input {
+            if char != "(" || char != ")" || char != "." || char != "," {
+                outstr += String(char)
+            }
+        }
+        
+        output = Token(token: outstr, type: typeFlag)
         
         return output
     }
@@ -18,21 +28,21 @@ class TokenProcessor {
     /// This function is for checking if the token has "." in the beginning
     /// If it has it it's a type not a token
     func prefixCheck(_ input: String) -> Bool {
-        var buffer = NSString(string: input)
+        let buffer = NSString(string: input)
         return buffer.hasPrefix(".")
     }
     
-    func typeCheck(_ input: String) -> TokenType {
-        // TODO: add .B .A .N .W .X STOP_WORDS DID QID
+    func typeCheck(_ input: String) {
+        // TODO: add .B .N .W .X STOP_WORDS DID QID
         switch input {
         case "I":
-            return TokenType.index
+            typeFlag = TokenType.index
         case "T":
-            return TokenType.text
+            typeFlag = TokenType.title
         case "A":
-            return TokenType.author
+            typeFlag = TokenType.author
         default:
-            return TokenType.text
+            typeFlag = TokenType.title
         }
     }
 }
