@@ -35,11 +35,11 @@ class TokenProcessor {
     func typeCheck(_ input: String) {
         // TODO: add .B .N .W .X STOP_WORDS DID QID
         switch input {
-        case "I":
+        case ".I":
             typeFlag = TokenType.index
-        case "T":
+        case ".T":
             typeFlag = TokenType.title
-        case "A":
+        case ".A":
             typeFlag = TokenType.author
         default:
             typeFlag = TokenType.title
