@@ -16,11 +16,21 @@ class TokenProcessor {
         var output: Token
         
         for char in input {
-            if char < Character(UnicodeScalar(65)) ||
-                char > Character(UnicodeScalar(90)) ||
-                char < Character(UnicodeScalar(97)) ||
-                char > Character(UnicodeScalar(122)) {
-                outstr += String(char)
+            if char.isASCII {
+//                if char.asciiValue! > 65 ||
+//                    char.asciiValue! < 90 ||
+//                    char.asciiValue! > 97 ||
+//                    char.asciiValue! < 122 {
+//                    outstr += String(char)
+//                }
+                switch char.asciiValue! {
+                case 65 ... 90:
+                    outstr += String(char)
+                case 97 ... 122:
+                    outstr += String(char)
+                default:
+                    outstr += ""
+                }
             }
         }
         

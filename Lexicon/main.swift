@@ -17,16 +17,16 @@ let stopWord = fileReader.readFile(fileURL: files[2])
 
 tokenizer.setStopWord(string: stopWord)
 
-for stopword in tokenizer.tokenProceessor.stopWords {
-    print(stopword)
-    print("-------------------------------")
-}
-
-
-//for token in tokens {
-//    print(token.getToken())
-//    print(token.type)
+//for stopword in tokenizer.tokenProceessor.stopWords {
+//    print(stopword)
 //    print("-------------------------------")
 //}
+
+
+for token in tokens {
+    print(token.getToken())
+    print(token.type)
+    print("-------------------------------")
+}
 
 //print(content)
