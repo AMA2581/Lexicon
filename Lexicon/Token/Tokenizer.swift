@@ -15,11 +15,10 @@ class Tokenizer {
         let rawDatas = wordSeperator(input)
         
         for rawData in rawDatas {
-            var buffer = rawData
-            if tokenProceessor.prefixCheck(buffer) {
-                tokenProceessor.typeCheck(buffer)
+            if tokenProceessor.prefixCheck(rawData) {
+                tokenProceessor.typeCheck(rawData)
             } else {
-                output.append(tokenProceessor.process(buffer))
+                output.append(tokenProceessor.process(rawData))
             }
         }
         
@@ -27,7 +26,7 @@ class Tokenizer {
     }
     
     private func wordSeperator(_ input: String) -> [String] {
-        var buffers = input.components(separatedBy: "\n")
+        let buffers = input.components(separatedBy: "\n")
         var out: [String] = []
         
         for buffer in buffers {
