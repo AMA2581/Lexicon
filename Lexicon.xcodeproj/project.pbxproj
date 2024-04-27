@@ -11,6 +11,7 @@
 		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2ED94DC12BDCEA9000E6CB12 /* StopWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED94DC02BDCEA9000E6CB12 /* StopWord.swift */; };
+		2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED94DC42BDCFC8600E6CB12 /* PythonKit */; };
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
 		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
@@ -41,6 +42,7 @@
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2ED94DC02BDCEA9000E6CB12 /* StopWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWord.swift; sourceTree = "<group>"; };
+		2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lexicon.entitlements; sourceTree = "<group>"; };
 		2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProcessor.swift; sourceTree = "<group>"; };
 		2EF10D9E2BD90C3900FEE478 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +104,7 @@
 		2E5F48912BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXGroup;
 			children = (
+				2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */,
 				2E5F48922BD699A800C7A62F /* main.swift */,
 				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
 				2E0ECFA02BD7F6900068048C /* Token */,
@@ -134,6 +138,9 @@
 			dependencies = (
 			);
 			name = Lexicon;
+			packageProductDependencies = (
+				2ED94DC42BDCFC8600E6CB12 /* PythonKit */,
+			);
 			productName = Lexicon;
 			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
 			productType = "com.apple.product-type.tool";
@@ -162,6 +169,9 @@
 				Base,
 			);
 			mainGroup = 2E5F48762BD68C9800C7A62F;
+			packageReferences = (
+				2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 2E5F48802BD68C9800C7A62F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -312,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_ENTITLEMENTS = Lexicon/Lexicon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -328,6 +339,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_ENTITLEMENTS = Lexicon/Lexicon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -361,6 +373,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2ED94DC42BDCFC8600E6CB12 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E5F48772BD68C9800C7A62F /* Project object */;
 }
