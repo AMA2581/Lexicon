@@ -18,6 +18,7 @@ var tokens = tokenizer.tokenizer(data: content)
 
 for token in tokens {
     print(token.getToken())
+    print("-------------------------------")
 }
 
 //print(content)

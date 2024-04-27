@@ -12,7 +12,7 @@ class Tokenizer {
     
     func tokenizer(data input: String) -> [Token] {
         var output: [Token] = []
-        let rawDatas = input.components(separatedBy: " ")
+        let rawDatas = wordSeperator(input)
         
         for rawData in rawDatas {
             var buffer = rawData
@@ -24,5 +24,16 @@ class Tokenizer {
         }
         
         return output
+    }
+    
+    private func wordSeperator(_ input: String) -> [String] {
+        var buffers = input.components(separatedBy: "\n")
+        var out: [String] = []
+        
+        for buffer in buffers {
+            out += buffer.components(separatedBy: " ")
+        }
+        
+        return out
     }
 }
