@@ -48,6 +48,8 @@ class TokenProcessor {
             typeFlag = TokenType.bibliography
         case ".W":
             typeFlag = TokenType.text
+        case ".N":
+            typeFlag = TokenType.date
         default:
             typeFlag = TokenType.title
         }
