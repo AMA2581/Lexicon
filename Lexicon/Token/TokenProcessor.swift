@@ -70,4 +70,16 @@ class TokenProcessor {
         
         return outstr
     }
+    
+    func isStopword(string input: String) -> Bool {
+        var flag = false
+        
+        for stopWord in stopWords {
+            if stopWord == input {
+                flag = true
+            }
+        }
+        
+        return flag
+    }
 }

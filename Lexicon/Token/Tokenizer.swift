@@ -19,7 +19,14 @@ class Tokenizer {
                 tokenProceessor.typeCheck(rawData)
             } else {
                 if tokenProceessor.strProcessor(rawData) != "" {
-                    output.append(tokenProceessor.process(tokenProceessor.strProcessor(rawData)))
+                    let buffer = tokenProceessor.strProcessor(rawData)
+                    // TODO: add support for other types currently it's processing only title and text
+                    if tokenProceessor.typeFlag == TokenType.text ||
+                        tokenProceessor.typeFlag == TokenType.title {
+                        if !tokenProceessor.isStopword(string: buffer) {
+                            output.append(tokenProceessor.process(buffer))
+                        }
+                    }
                 }
             }
         }
