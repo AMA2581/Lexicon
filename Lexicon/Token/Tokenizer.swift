@@ -18,7 +18,9 @@ class Tokenizer {
             if tokenProceessor.prefixCheck(rawData) {
                 tokenProceessor.typeCheck(rawData)
             } else {
-                output.append(tokenProceessor.process(rawData))
+                if tokenProceessor.strProcessor(rawData) != "" {
+                    output.append(tokenProceessor.process(tokenProceessor.strProcessor(rawData)))
+                }
             }
         }
         
