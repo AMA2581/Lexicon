@@ -8,7 +8,7 @@
 import Foundation
 import PythonKit
 
-class StemPyReader {
+class Stemmer {
     func runPython() -> PythonObject {
         let sys = Python.import("sys")
         sys.path.append("/Users/ama25/Documents/Lexicon/Lexicon/Stemmer/")
