@@ -10,6 +10,7 @@ import PythonKit
 
 class Stemmer {
     
+    // TODO: change this to gets token and update it
     func Stemmer(_ input: String) -> String {
         let out = String(runPython(input)) ?? "something's wrong"
         return out
