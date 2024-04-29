@@ -1,4 +1,3 @@
 
-def stemmer() {
-
-}
+def stemmer(self, input):
+    return input
