@@ -96,3 +96,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 Lexicon/StopWord/__pycache__
+Lexicon/Stemmer/__pycache__
