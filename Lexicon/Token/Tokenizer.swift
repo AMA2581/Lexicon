@@ -18,7 +18,16 @@ class Tokenizer {
             if tokenProceessor.prefixCheck(rawData) {
                 tokenProceessor.typeCheck(rawData)
             } else {
-                output.append(tokenProceessor.process(rawData))
+                if tokenProceessor.strProcessor(rawData) != "" {
+                    let buffer = tokenProceessor.strProcessor(rawData)
+                    // TODO: add support for other types currently it's processing only title and text
+                    if tokenProceessor.typeFlag == TokenType.text ||
+                        tokenProceessor.typeFlag == TokenType.title {
+                        if !tokenProceessor.isStopword(string: buffer) {
+                            output.append(tokenProceessor.process(buffer))
+                        }
+                    }
+                }
             }
         }
         
@@ -34,5 +43,9 @@ class Tokenizer {
         }
         
         return out
+    }
+    
+    func setStopWord(string input: String) {
+        tokenProceessor.stopWords = input.components(separatedBy: "\n")
     }
 }
