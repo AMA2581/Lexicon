@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import PythonKit
 
 var fileReader = FileReader()
 var tokenizer = Tokenizer()
