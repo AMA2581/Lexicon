@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PythonKit
 
 var fileReader = FileReader()
 var tokenizer = Tokenizer()
@@ -17,6 +18,8 @@ let stopWord = fileReader.readFile(fileURL: files[2])
 tokenizer.setStopWord(string: stopWord)
 
 var tokens = tokenizer.tokenizer(data: content)
+//PythonLibrary.useLibrary(at: "/opt/homebrew/bin/python3.12")
+var stemmer = Stemmer()
 
 //for stopword in tokenizer.tokenProceessor.stopWords {
 //    print(stopword)

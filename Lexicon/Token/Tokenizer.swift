@@ -9,6 +9,7 @@ import Foundation
 
 class Tokenizer {
     var tokenProceessor = TokenProcessor()
+    var stemmer = Stemmer()
     
     func tokenizer(data input: String) -> [Token] {
         var output: [Token] = []
@@ -19,11 +20,12 @@ class Tokenizer {
                 tokenProceessor.typeCheck(rawData)
             } else {
                 if tokenProceessor.strProcessor(rawData) != "" {
-                    let buffer = tokenProceessor.strProcessor(rawData)
+                    var buffer = tokenProceessor.strProcessor(rawData)
                     // TODO: add support for other types currently it's processing only title and text
                     if tokenProceessor.typeFlag == TokenType.text ||
                         tokenProceessor.typeFlag == TokenType.title {
                         if !tokenProceessor.isStopword(string: buffer) {
+                            buffer = stemmer.stemmer(buffer)
                             output.append(tokenProceessor.process(buffer))
                         }
                     }
