@@ -10,7 +10,10 @@
 		2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
 		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
-		2E618C122BE89C09003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C112BE89C09003FDAD8 /* MakeDictionary.swift */; };
+		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
+		2E88BB972BE1585D0066C106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB962BE1585D0066C106 /* ContentView.swift */; };
+		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
+		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
 		2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
 		2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED94DC42BDCFC8600E6CB12 /* PythonKit */; };
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
@@ -42,7 +45,12 @@
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		2E618C112BE89C09003FDAD8 /* MakeDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDictionary.swift; sourceTree = "<group>"; };
+		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
+		2E88BB962BE1585D0066C106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LexiconApp.entitlements; sourceTree = "<group>"; };
 		2ED89CEE2BDE245700C44634 /* Stemmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemmer.swift; sourceTree = "<group>"; };
 		2ED89CF12BDE24A900C44634 /* PyStemmer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyStemmer.py; sourceTree = "<group>"; };
 		2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lexicon.entitlements; sourceTree = "<group>"; };
@@ -57,6 +65,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E88BB8F2BE1585D0066C106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +107,7 @@
 			children = (
 				2E5F48892BD694C400C7A62F /* .gitignore */,
 				2E5F48912BD699A800C7A62F /* Lexicon */,
+				2E88BB932BE1585D0066C106 /* LexiconApp */,
 				2E5F48802BD68C9800C7A62F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				2E5F48902BD699A800C7A62F /* Lexicon */,
+				2E88BB922BE1585D0066C106 /* LexiconApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -118,12 +135,24 @@
 			path = Lexicon;
 			sourceTree = "<group>";
 		};
-		2E618C102BE89BCF003FDAD8 /* Dictionary */ = {
+		2E88BB932BE1585D0066C106 /* LexiconApp */ = {
 			isa = PBXGroup;
 			children = (
-				2E618C112BE89C09003FDAD8 /* MakeDictionary.swift */,
+				2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */,
+				2E88BB962BE1585D0066C106 /* ContentView.swift */,
+				2E88BB982BE1585F0066C106 /* Assets.xcassets */,
+				2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */,
+				2E88BB9A2BE1585F0066C106 /* Preview Content */,
 			);
-			path = Dictionary;
+			path = LexiconApp;
+			sourceTree = "<group>";
+		};
+		2E88BB9A2BE1585F0066C106 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		2ED89CF02BDE246300C44634 /* Stemmer */ = {
@@ -158,6 +187,23 @@
 			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
 			productType = "com.apple.product-type.tool";
 		};
+		2E88BB912BE1585D0066C106 /* LexiconApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E88BB9E2BE1585F0066C106 /* Build configuration list for PBXNativeTarget "LexiconApp" */;
+			buildPhases = (
+				2E88BB8E2BE1585D0066C106 /* Sources */,
+				2E88BB8F2BE1585D0066C106 /* Frameworks */,
+				2E88BB902BE1585D0066C106 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LexiconApp;
+			productName = LexiconApp;
+			productReference = 2E88BB922BE1585D0066C106 /* LexiconApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,6 +215,9 @@
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					2E5F488F2BD699A800C7A62F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					2E88BB912BE1585D0066C106 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -190,9 +239,22 @@
 			projectRoot = "";
 			targets = (
 				2E5F488F2BD699A800C7A62F /* Lexicon */,
+				2E88BB912BE1585D0066C106 /* LexiconApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E88BB902BE1585D0066C106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */,
+				2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2E5F488C2BD699A800C7A62F /* Sources */ = {
@@ -207,6 +269,15 @@
 				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
 				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
 				2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E88BB8E2BE1585D0066C106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E88BB972BE1585D0066C106 /* ContentView.swift in Sources */,
+				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +436,67 @@
 			};
 			name = Release;
 		};
+		2E88BB9F2BE1585F0066C106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = LexiconApp/LexiconApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LexiconApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4JD236954;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amirabravesh.LexiconApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2E88BBA02BE1585F0066C106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = LexiconApp/LexiconApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LexiconApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4JD236954;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amirabravesh.LexiconApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -382,6 +514,15 @@
 			buildConfigurations = (
 				2E5F48952BD699A800C7A62F /* Debug */,
 				2E5F48962BD699A800C7A62F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E88BB9E2BE1585F0066C106 /* Build configuration list for PBXNativeTarget "LexiconApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E88BB9F2BE1585F0066C106 /* Debug */,
+				2E88BBA02BE1585F0066C106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
