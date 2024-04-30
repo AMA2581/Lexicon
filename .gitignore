@@ -4,10 +4,6 @@
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 .DS_Store
-NewsWave/apiKey.rtf
-apiKey.rtf
-NewsWave/APIKeys.swift
-APIKeys.swift
 
 ## User settings
 xcuserdata/
@@ -96,3 +92,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 Lexicon/StopWord/__pycache__
+Lexicon/Stemmer/__pycache__

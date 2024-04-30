@@ -12,12 +12,14 @@ struct FileReader {
     func fileUrlGetter(datasetFolderUrl DFURL: URL?) -> [URL] {
         let datasetFolderURL = DFURL
         var output: [URL] = []
-        
+//        print(datasetFolderURL)
         do {
             if let datasetFolderURL {
                 let itemsInDirectory = try FileManager.default.contentsOfDirectory(at: datasetFolderURL, includingPropertiesForKeys: nil)
                 for item in itemsInDirectory {
+//                    let fileName: NSString = NSString(string: item.absoluteString)
                     output.append(item)
+//                    print(fileName)
                 }
             }
         } catch {
