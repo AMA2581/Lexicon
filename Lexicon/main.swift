@@ -18,13 +18,7 @@ let stopWord = fileReader.readFile(fileURL: files[2])
 tokenizer.setStopWord(string: stopWord)
 
 var tokens = tokenizer.tokenizer(data: content)
-//PythonLibrary.useLibrary(at: "/opt/homebrew/bin/python3.12")
 var stemmer = Stemmer()
-
-//for stopword in tokenizer.tokenProceessor.stopWords {
-//    print(stopword)
-//    print("-------------------------------")
-//}
 
 
 for token in tokens {
@@ -32,5 +26,3 @@ for token in tokens {
     print(token.type)
     print("-------------------------------")
 }
-
-//print(content)
