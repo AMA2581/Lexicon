@@ -15,7 +15,6 @@
 		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
 		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
 		2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
-		2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2ED94DC42BDCFC8600E6CB12 /* PythonKit */; };
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
 		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
@@ -64,7 +63,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ED94DC52BDCFC8600E6CB12 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,7 +179,6 @@
 			);
 			name = Lexicon;
 			packageProductDependencies = (
-				2ED94DC42BDCFC8600E6CB12 /* PythonKit */,
 			);
 			productName = Lexicon;
 			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
@@ -539,14 +536,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2ED94DC42BDCFC8600E6CB12 /* PythonKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
-			productName = PythonKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E5F48772BD68C9800C7A62F /* Project object */;
 }
