@@ -11,20 +11,7 @@ import AppKit
 struct MainView: View {
     var body: some View {
         NavigationStack {
-            Button {
-//                let picker = DocumentPickerViewController(
-//                    supportedTypes: ["log"],
-//                    onPick: { url in
-//                        print("url : \(url)")
-//                    },
-//                    onDismiss: {
-//                        print("dismiss")
-//                    }
-//                )
-//                NSApplication.shared.windows.first?.rootViewController?.present(picker, animated: true)
-            } label: {
-                Text("Choose file")
-            }
+            FilePickerView()
         }
         .padding(.all, 25)
     }

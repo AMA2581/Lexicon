@@ -9,24 +9,13 @@ import AppKit
 import SwiftUI
 
 struct FilePickerView: View {
-    @State private var selectedFileURL: URL?
-
-    func pickDocument() {
-        let panel = NSOpenPanel()
-        panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["txt", "", "all"] // Adjust for your file types
-
-        panel.beginSheetModal(for: .init()) { responce in
-            print(panel.url)
-            selectedFileURL = panel.url
-        }
-    }
+    @StateObject private var viewModel = FilePickerViewModel()
 
     var body: some View {
         Button("Pick File") {
-            pickDocument()
+            viewModel.pickDocument()
         }
-        if let url = selectedFileURL {
+        if let url = viewModel.selectedFileURL {
             Text("Selected file: \(url.lastPathComponent)")
         }
     }
