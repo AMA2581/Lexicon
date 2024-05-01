@@ -11,7 +11,8 @@ import SwiftUI
 struct LexiconAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FilePickerView()
         }
+        
     }
 }
