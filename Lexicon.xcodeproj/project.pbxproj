@@ -9,11 +9,22 @@
 /* Begin PBXBuildFile section */
 		2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
 		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
+		2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1EAFDC2BE212AE00227503 /* PythonKit */; };
+		2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
-		2E88BB972BE1585D0066C106 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB962BE1585D0066C106 /* ContentView.swift */; };
 		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
 		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
+		2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1E4492BE20FB80047C41E /* MainView.swift */; };
+		2EA1E44D2BE211770047C41E /* DocumentPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1E44C2BE211770047C41E /* DocumentPickerViewController.swift */; };
+		2EA1E4502BE212310047C41E /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
+		2EA1E4512BE212350047C41E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
+		2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
+		2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
+		2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
+		2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
+		2EA1E4562BE212450047C41E /* PyStemmer.py in Resources */ = {isa = PBXBuildFile; fileRef = 2ED89CF12BDE24A900C44634 /* PyStemmer.py */; };
+		2EA1E4582BE212560047C41E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EA1E4572BE212560047C41E /* PythonKit */; };
 		2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
@@ -41,15 +52,17 @@
 		2E0ECF9A2BD7C9500068048C /* query.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = query.text; sourceTree = "<group>"; };
 		2E0ECF9B2BD7C9500068048C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2E0ECF9E2BD7F6880068048C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerView.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
-		2E88BB962BE1585D0066C106 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LexiconApp.entitlements; sourceTree = "<group>"; };
+		2EA1E4492BE20FB80047C41E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2EA1E44C2BE211770047C41E /* DocumentPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPickerViewController.swift; sourceTree = "<group>"; };
 		2ED89CEE2BDE245700C44634 /* Stemmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemmer.swift; sourceTree = "<group>"; };
 		2ED89CF12BDE24A900C44634 /* PyStemmer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyStemmer.py; sourceTree = "<group>"; };
 		2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lexicon.entitlements; sourceTree = "<group>"; };
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA1E4582BE212560047C41E /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +115,13 @@
 			path = Token;
 			sourceTree = "<group>";
 		};
+		2E1EAFDB2BE212AE00227503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E5F48762BD68C9800C7A62F = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +129,7 @@
 				2E5F48912BD699A800C7A62F /* Lexicon */,
 				2E88BB932BE1585D0066C106 /* LexiconApp */,
 				2E5F48802BD68C9800C7A62F /* Products */,
+				2E1EAFDB2BE212AE00227503 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,7 +159,8 @@
 			isa = PBXGroup;
 			children = (
 				2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */,
-				2E88BB962BE1585D0066C106 /* ContentView.swift */,
+				2EA1E44E2BE2117E0047C41E /* ViewController */,
+				2EA1E44B2BE20FC40047C41E /* View */,
 				2E88BB982BE1585F0066C106 /* Assets.xcassets */,
 				2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */,
 				2E88BB9A2BE1585F0066C106 /* Preview Content */,
@@ -150,6 +174,23 @@
 				2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2EA1E44B2BE20FC40047C41E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EA1E4492BE20FB80047C41E /* MainView.swift */,
+				2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EA1E44E2BE2117E0047C41E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2EA1E44C2BE211770047C41E /* DocumentPickerViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		2ED89CF02BDE246300C44634 /* Stemmer */ = {
@@ -178,6 +219,7 @@
 			);
 			name = Lexicon;
 			packageProductDependencies = (
+				2EA1E4572BE212560047C41E /* PythonKit */,
 			);
 			productName = Lexicon;
 			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
@@ -196,6 +238,9 @@
 			dependencies = (
 			);
 			name = LexiconApp;
+			packageProductDependencies = (
+				2E1EAFDC2BE212AE00227503 /* PythonKit */,
+			);
 			productName = LexiconApp;
 			productReference = 2E88BB922BE1585D0066C106 /* LexiconApp.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +292,7 @@
 			files = (
 				2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */,
 				2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */,
+				2EA1E4562BE212450047C41E /* PyStemmer.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E88BB972BE1585D0066C106 /* ContentView.swift in Sources */,
+				2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */,
+				2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */,
 				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
+				2EA1E4502BE212310047C41E /* FileReader.swift in Sources */,
+				2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */,
+				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
+				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
+				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
+				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
+				2EA1E44D2BE211770047C41E /* DocumentPickerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +500,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lexicon;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -477,6 +532,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lexicon;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -534,6 +590,19 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E1EAFDC2BE212AE00227503 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+		2EA1E4572BE212560047C41E /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E5F48772BD68C9800C7A62F /* Project object */;
 }
