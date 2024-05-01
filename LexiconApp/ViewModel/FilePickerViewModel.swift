@@ -5,8 +5,8 @@
 //  Created by Amir Mahdi Abravesh on 5/1/24.
 //
 
-import Foundation
 import AppKit
+import Foundation
 
 class FilePickerViewModel: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
@@ -14,9 +14,9 @@ class FilePickerViewModel: ObservableObject {
     func pickDocument() {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["txt", "", "all"] // Adjust for your file types
+        panel.allowedFileTypes = ["txt", "", "all"] // Adjust for file types
 
-        panel.beginSheetModal(for: .init()) { responce in
+        panel.beginSheetModal(for: .init()) { _ in
 //            print(panel.url)
             self.selectedFileURL = panel.url
         }

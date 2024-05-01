@@ -5,8 +5,8 @@
 //  Created by Amir Mahdi Abravesh on 5/1/24.
 //
 
-import SwiftUI
 import AppKit
+import SwiftUI
 
 struct MainView: View {
     var body: some View {
