@@ -14,9 +14,20 @@ struct FilePickerView: View {
     var body: some View {
         Button("Pick File") {
             viewModel.pickDocument()
+            viewModel.saveFileUrl()
         }
-        if let url = viewModel.selectedFileURL {
-            Text("Selected file: \(url.lastPathComponent)")
+        if !viewModel.isFileNil() {
+//            Text("Selected file: \(url.lastPathComponent)")
+            Button("Pick Stop Word File") {
+                viewModel.pickDocument()
+                viewModel.saveSWUrl()
+            }
+            
+            if !viewModel.isSWNil() {
+                Button("Start Tokenizing") {
+                    
+                }
+            }
         }
     }
 }
