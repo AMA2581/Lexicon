@@ -30,6 +30,22 @@ class Model {
         self.stopWordURL = URL(string: fileString)
     }
     
+    func isFileNil() -> Bool {
+        if fileURL == nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func isSWNil() -> Bool {
+        if stopWordURL == nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func start() -> [Token] {
         var content: String?
         var stopWord: String?
