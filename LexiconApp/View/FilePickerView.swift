@@ -23,7 +23,7 @@ struct FilePickerView: View {
             
             if !viewModel.isSWNil() {
                 Button("Start Tokenizing") {
-                    
+                    viewModel.model.start()
                 }
             }
         }

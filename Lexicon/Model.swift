@@ -64,6 +64,12 @@ class Model {
             tokens = tokenizer.tokenizer(data: safeContent)
         }
         
+        for token in tokens {
+            print(token.getToken())
+            print(token.type)
+            print("--------------------------------")
+        }
+        
         return tokens
     }
 }
