@@ -46,7 +46,7 @@ class Model {
         }
     }
     
-    func start() -> [Token] {
+    func start() -> [String: Int] {
         var content: String?
         var stopWord: String?
         var tokens: [Token] = []
@@ -64,12 +64,9 @@ class Model {
             tokens = tokenizer.tokenizer(data: safeContent)
         }
         
-        for token in tokens {
-            print(token.getToken())
-            print(token.type)
-            print("--------------------------------")
-        }
+        var makeDic = MakeDictionary(tokens: tokens)
+        var dictionary = makeDic.freqDictionary()
         
-        return tokens
+        return dictionary
     }
 }

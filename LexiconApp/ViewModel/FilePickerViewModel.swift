@@ -10,6 +10,7 @@ import Foundation
 
 class FilePickerViewModel: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
+    @Published private(set) var results: [String: Int]?
     var model = Model()
     
     func pickDocument(isSW: Bool) {
@@ -48,5 +49,19 @@ class FilePickerViewModel: ObservableObject {
     
     func isFileNil() -> Bool {
         return model.isFileNil()
+    }
+    
+    func start() {
+        results = model.start()
+    }
+    
+    func resultToStr() -> String {
+        var out = ""
+        
+        for result in results! {
+            out += "\(result.key): \(result.value)\n"
+        }
+        
+        return out
     }
 }
