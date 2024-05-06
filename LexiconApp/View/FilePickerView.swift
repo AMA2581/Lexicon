@@ -12,7 +12,9 @@ struct FilePickerView: View {
     @StateObject private var viewModel = FilePickerViewModel()
 
     var body: some View {
-        if viewModel.results == nil {
+        if viewModel.isRunning && viewModel.results == nil {
+            Text("Running...")
+        } else if !viewModel.isRunning && viewModel.results == nil {
             VStack {
                 Button("Pick File") {
                     viewModel.pickDocument(isSW: false)

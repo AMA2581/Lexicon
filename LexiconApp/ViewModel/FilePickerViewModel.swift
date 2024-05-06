@@ -11,6 +11,7 @@ import Foundation
 class FilePickerViewModel: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     @Published private(set) var results: [String: Int]?
+    @Published private(set) var isRunning = false
     var model = Model()
     
     func pickDocument(isSW: Bool) {
@@ -52,7 +53,12 @@ class FilePickerViewModel: ObservableObject {
     }
     
     func start() {
-        results = model.start()
+        isRunning = true
+        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
+        concurrentQueue.sync {
+            results = model.start()
+            isRunning = false
+        }
     }
     
     func resultToStr() -> String {
