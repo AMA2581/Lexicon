@@ -20,8 +20,15 @@ var tokens = tokenizer.tokenizer(data: content)
 var stemmer = Stemmer()
 
 
-for token in tokens {
-    print(token.getToken())
-    print(token.type)
-    print("-------------------------------")
+//for token in tokens {
+//    print(token.getToken())
+//    print(token.type)
+//    print("-------------------------------")
+//}
+
+var makeDic = MakeDictionary(tokens: tokens)
+var dictionary = makeDic.freqDictionary()
+
+for dic in dictionary {
+    print(dic)
 }
