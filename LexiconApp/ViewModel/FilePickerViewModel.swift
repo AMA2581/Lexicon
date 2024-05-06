@@ -12,7 +12,7 @@ class FilePickerViewModel: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     var model = Model()
     
-    func pickDocument() {
+    func pickDocument(isSW: Bool) {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
         panel.allowedFileTypes = ["txt", "", "all"] // Adjust for file types
@@ -20,6 +20,11 @@ class FilePickerViewModel: ObservableObject {
         panel.beginSheetModal(for: .init()) { _ in
 //            print(panel.url)
             self.selectedFileURL = panel.url
+            if isSW {
+                self.saveSWUrl()
+            } else {
+                self.saveFileUrl()
+            }
         }
     }
     
