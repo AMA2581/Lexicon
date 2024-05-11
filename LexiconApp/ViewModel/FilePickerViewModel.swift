@@ -1,0 +1,73 @@
+//
+//  FilePickerViewController.swift
+//  LexiconApp
+//
+//  Created by Amir Mahdi Abravesh on 5/1/24.
+//
+
+import AppKit
+import Foundation
+
+class FilePickerViewModel: ObservableObject {
+    @Published private(set) var selectedFileURL: URL?
+    @Published private(set) var results: [String: Int]?
+    @Published private(set) var isRunning = false
+    var model = Model()
+    
+    func pickDocument(isSW: Bool) {
+        let panel = NSOpenPanel()
+        panel.allowsMultipleSelection = false
+        panel.allowedFileTypes = ["txt", "", "all"] // Adjust for file types
+
+        panel.beginSheetModal(for: .init()) { _ in
+//            print(panel.url)
+            self.selectedFileURL = panel.url
+            if isSW {
+                self.saveSWUrl()
+            } else {
+                self.saveFileUrl()
+            }
+        }
+    }
+    
+    func saveFileUrl() {
+        if let safeURL = selectedFileURL {
+            print(safeURL)
+            model.setFile(fileURL: safeURL)
+        }
+    }
+    
+    func saveSWUrl() {
+        if let safeURL = selectedFileURL {
+            print(safeURL)
+            model.setStopWordFile(fileURL: safeURL)
+        }
+    }
+    
+    func isSWNil() -> Bool {
+        return model.isSWNil()
+    }
+    
+    func isFileNil() -> Bool {
+        return model.isFileNil()
+    }
+    
+    func start() {
+        isRunning = true
+        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
+        concurrentQueue.sync {
+            results = model.start()
+            isRunning = false
+        }
+    }
+    
+    func resultToStr() -> String {
+        var out = ""
+        
+        for result in results! {
+            out += "\(result.key): \(result.value)\n"
+        }
+        
+        return out
+    }
+}

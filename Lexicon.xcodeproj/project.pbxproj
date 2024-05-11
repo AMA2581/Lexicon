@@ -7,11 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E5F48832BD68C9800C7A62F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48822BD68C9800C7A62F /* main.cpp */; };
+		2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
+		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
+		2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1EAFDC2BE212AE00227503 /* PythonKit */; };
+		2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */; };
+		2E1EAFE12BE244C500227503 /* FilePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */; };
+		2E1EAFE32BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
+		2E1EAFE42BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
+		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
+		2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
+		2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
+		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
+		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
+		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
+		2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1E4492BE20FB80047C41E /* MainView.swift */; };
+		2EA1E4502BE212310047C41E /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
+		2EA1E4512BE212350047C41E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
+		2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
+		2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
+		2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
+		2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
+		2EA1E4562BE212450047C41E /* PyStemmer.py in Resources */ = {isa = PBXBuildFile; fileRef = 2ED89CF12BDE24A900C44634 /* PyStemmer.py */; };
+		2EA1E4582BE212560047C41E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EA1E4572BE212560047C41E /* PythonKit */; };
+		2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
+		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
+		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
+		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2E5F487D2BD68C9800C7A62F /* CopyFiles */ = {
+		2E5F488E2BD699A800C7A62F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -23,64 +48,218 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E5F487F2BD68C9800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E5F48822BD68C9800C7A62F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2E0ECF942BD7C2FD0068048C /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		2E0ECF962BD7C9500068048C /* cacm.all */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cacm.all; sourceTree = "<group>"; };
+		2E0ECF972BD7C9500068048C /* cite.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cite.info; sourceTree = "<group>"; };
+		2E0ECF982BD7C9500068048C /* common_words */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common_words; sourceTree = "<group>"; };
+		2E0ECF992BD7C9500068048C /* qrels.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = qrels.text; sourceTree = "<group>"; };
+		2E0ECF9A2BD7C9500068048C /* query.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = query.text; sourceTree = "<group>"; };
+		2E0ECF9B2BD7C9500068048C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		2E0ECF9E2BD7F6880068048C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerView.swift; sourceTree = "<group>"; };
+		2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerViewModel.swift; sourceTree = "<group>"; };
+		2E1EAFE22BE24D3600227503 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeDictionary.swift; sourceTree = "<group>"; };
+		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
+		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LexiconApp.entitlements; sourceTree = "<group>"; };
+		2EA1E4492BE20FB80047C41E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2ED89CEE2BDE245700C44634 /* Stemmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemmer.swift; sourceTree = "<group>"; };
+		2ED89CF12BDE24A900C44634 /* PyStemmer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyStemmer.py; sourceTree = "<group>"; };
+		2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Lexicon.entitlements; sourceTree = "<group>"; };
+		2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProcessor.swift; sourceTree = "<group>"; };
+		2EF10D9E2BD90C3900FEE478 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2E5F487C2BD68C9800C7A62F /* Frameworks */ = {
+		2E5F488D2BD699A800C7A62F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA1E4582BE212560047C41E /* PythonKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E88BB8F2BE1585D0066C106 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0ECF9C2BD7C9500068048C /* cacm */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ECF962BD7C9500068048C /* cacm.all */,
+				2E0ECF972BD7C9500068048C /* cite.info */,
+				2E0ECF982BD7C9500068048C /* common_words */,
+				2E0ECF992BD7C9500068048C /* qrels.text */,
+				2E0ECF9A2BD7C9500068048C /* query.text */,
+				2E0ECF9B2BD7C9500068048C /* README */,
+			);
+			path = cacm;
+			sourceTree = "<group>";
+		};
+		2E0ECFA02BD7F6900068048C /* Token */ = {
+			isa = PBXGroup;
+			children = (
+				2E0ECF9E2BD7F6880068048C /* Token.swift */,
+				2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */,
+				2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */,
+				2EF10D9E2BD90C3900FEE478 /* TokenType.swift */,
+			);
+			path = Token;
+			sourceTree = "<group>";
+		};
+		2E1EAFDB2BE212AE00227503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2E5F48762BD68C9800C7A62F = {
 			isa = PBXGroup;
 			children = (
-				2E5F48812BD68C9800C7A62F /* Lexicon */,
+				2E5F48892BD694C400C7A62F /* .gitignore */,
+				2E5F48912BD699A800C7A62F /* Lexicon */,
+				2E88BB932BE1585D0066C106 /* LexiconApp */,
 				2E5F48802BD68C9800C7A62F /* Products */,
+				2E1EAFDB2BE212AE00227503 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		2E5F48802BD68C9800C7A62F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F487F2BD68C9800C7A62F /* Lexicon */,
+				2E5F48902BD699A800C7A62F /* Lexicon */,
+				2E88BB922BE1585D0066C106 /* LexiconApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E5F48812BD68C9800C7A62F /* Lexicon */ = {
+		2E5F48912BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXGroup;
 			children = (
-				2E5F48822BD68C9800C7A62F /* main.cpp */,
+				2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */,
+				2E5F48922BD699A800C7A62F /* main.swift */,
+				2E1EAFE22BE24D3600227503 /* Model.swift */,
+				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
+				2E0ECF9C2BD7C9500068048C /* cacm */,
+				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
+				2ED89CF02BDE246300C44634 /* Stemmer */,
+				2E0ECFA02BD7F6900068048C /* Token */,
 			);
 			path = Lexicon;
+			sourceTree = "<group>";
+		};
+		2E618C1A2BE8CCF7003FDAD8 /* Dictionary */ = {
+			isa = PBXGroup;
+			children = (
+				2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */,
+			);
+			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		2E88BB932BE1585D0066C106 /* LexiconApp */ = {
+			isa = PBXGroup;
+			children = (
+				2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */,
+				2EA1E44E2BE2117E0047C41E /* ViewModel */,
+				2EA1E44B2BE20FC40047C41E /* View */,
+				2E88BB982BE1585F0066C106 /* Assets.xcassets */,
+				2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */,
+				2E88BB9A2BE1585F0066C106 /* Preview Content */,
+			);
+			path = LexiconApp;
+			sourceTree = "<group>";
+		};
+		2E88BB9A2BE1585F0066C106 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2EA1E44B2BE20FC40047C41E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EA1E4492BE20FB80047C41E /* MainView.swift */,
+				2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2EA1E44E2BE2117E0047C41E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2ED89CF02BDE246300C44634 /* Stemmer */ = {
+			isa = PBXGroup;
+			children = (
+				2ED89CEE2BDE245700C44634 /* Stemmer.swift */,
+				2ED89CF12BDE24A900C44634 /* PyStemmer.py */,
+			);
+			path = Stemmer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2E5F487E2BD68C9800C7A62F /* Lexicon */ = {
+		2E5F488F2BD699A800C7A62F /* Lexicon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2E5F48862BD68C9800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */;
+			buildConfigurationList = 2E5F48942BD699A800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */;
 			buildPhases = (
-				2E5F487B2BD68C9800C7A62F /* Sources */,
-				2E5F487C2BD68C9800C7A62F /* Frameworks */,
-				2E5F487D2BD68C9800C7A62F /* CopyFiles */,
+				2E5F488C2BD699A800C7A62F /* Sources */,
+				2E5F488D2BD699A800C7A62F /* Frameworks */,
+				2E5F488E2BD699A800C7A62F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Lexicon;
+			packageProductDependencies = (
+				2EA1E4572BE212560047C41E /* PythonKit */,
+			);
 			productName = Lexicon;
-			productReference = 2E5F487F2BD68C9800C7A62F /* Lexicon */;
+			productReference = 2E5F48902BD699A800C7A62F /* Lexicon */;
 			productType = "com.apple.product-type.tool";
+		};
+		2E88BB912BE1585D0066C106 /* LexiconApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E88BB9E2BE1585F0066C106 /* Build configuration list for PBXNativeTarget "LexiconApp" */;
+			buildPhases = (
+				2E88BB8E2BE1585D0066C106 /* Sources */,
+				2E88BB8F2BE1585D0066C106 /* Frameworks */,
+				2E88BB902BE1585D0066C106 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LexiconApp;
+			packageProductDependencies = (
+				2E1EAFDC2BE212AE00227503 /* PythonKit */,
+			);
+			productName = LexiconApp;
+			productReference = 2E88BB922BE1585D0066C106 /* LexiconApp.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -89,9 +268,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
-					2E5F487E2BD68C9800C7A62F = {
+					2E5F488F2BD699A800C7A62F = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					2E88BB912BE1585D0066C106 = {
 						CreatedOnToolsVersion = 15.3;
 					};
 				};
@@ -105,21 +288,65 @@
 				Base,
 			);
 			mainGroup = 2E5F48762BD68C9800C7A62F;
+			packageReferences = (
+				2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */,
+			);
 			productRefGroup = 2E5F48802BD68C9800C7A62F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2E5F487E2BD68C9800C7A62F /* Lexicon */,
+				2E5F488F2BD699A800C7A62F /* Lexicon */,
+				2E88BB912BE1585D0066C106 /* LexiconApp */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		2E88BB902BE1585D0066C106 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */,
+				2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */,
+				2EA1E4562BE212450047C41E /* PyStemmer.py in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		2E5F487B2BD68C9800C7A62F /* Sources */ = {
+		2E5F488C2BD699A800C7A62F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5F48832BD68C9800C7A62F /* main.cpp in Sources */,
+				2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */,
+				2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */,
+				2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */,
+				2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */,
+				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
+				2E1EAFE32BE24D3600227503 /* Model.swift in Sources */,
+				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
+				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
+				2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E88BB8E2BE1585D0066C106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E1EAFE12BE244C500227503 /* FilePickerViewModel.swift in Sources */,
+				2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */,
+				2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */,
+				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
+				2EA1E4502BE212310047C41E /* FileReader.swift in Sources */,
+				2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */,
+				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
+				2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
+				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
+				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
+				2E1EAFE42BE24D3600227503 /* Model.swift in Sources */,
+				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -179,11 +406,13 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c c++ cpp c";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				TAPI_LANGUAGE = "objective-c++";
 			};
 			name = Debug;
 		};
@@ -194,7 +423,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -234,30 +463,108 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c c++ cpp c";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				TAPI_LANGUAGE = "objective-c++";
 			};
 			name = Release;
 		};
-		2E5F48872BD68C9800C7A62F /* Debug */ = {
+		2E5F48952BD699A800C7A62F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_ENTITLEMENTS = Lexicon/Lexicon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2E5F48882BD68C9800C7A62F /* Release */ = {
+		2E5F48962BD699A800C7A62F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_ENTITLEMENTS = Lexicon/Lexicon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y4JD236954;
 				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGES = "objective-c cpp c++ c";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2E88BB9F2BE1585F0066C106 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = LexiconApp/LexiconApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LexiconApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4JD236954;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lexicon;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amirabravesh.LexiconApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2E88BBA02BE1585F0066C106 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = LexiconApp/LexiconApp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LexiconApp/Preview Content\"";
+				DEVELOPMENT_TEAM = Y4JD236954;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Lexicon;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = amirabravesh.LexiconApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -273,16 +580,49 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2E5F48862BD68C9800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */ = {
+		2E5F48942BD699A800C7A62F /* Build configuration list for PBXNativeTarget "Lexicon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2E5F48872BD68C9800C7A62F /* Debug */,
-				2E5F48882BD68C9800C7A62F /* Release */,
+				2E5F48952BD699A800C7A62F /* Debug */,
+				2E5F48962BD699A800C7A62F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E88BB9E2BE1585F0066C106 /* Build configuration list for PBXNativeTarget "LexiconApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E88BB9F2BE1585F0066C106 /* Debug */,
+				2E88BBA02BE1585F0066C106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pvieito/PythonKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2E1EAFDC2BE212AE00227503 /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+		2EA1E4572BE212560047C41E /* PythonKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2ED94DC32BDCFC8600E6CB12 /* XCRemoteSwiftPackageReference "PythonKit" */;
+			productName = PythonKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2E5F48772BD68C9800C7A62F /* Project object */;
 }
