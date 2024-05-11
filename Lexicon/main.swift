@@ -16,7 +16,7 @@ let content = fileReader.readFile(fileURL: files[1])
 let stopWord = fileReader.readFile(fileURL: files[2])
 tokenizer.setStopWord(string: stopWord)
 
-var tokens = tokenizer.tokenizer(data: content)
+var tokens = tokenizer.dataTokenizer(data: content)
 var stemmer = Stemmer()
 
 

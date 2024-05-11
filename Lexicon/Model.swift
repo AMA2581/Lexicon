@@ -61,7 +61,7 @@ class Model {
         }
         
         if let safeContent = content {
-            tokens = tokenizer.tokenizer(data: safeContent)
+            tokens = tokenizer.dataTokenizer(data: safeContent)
         }
         
         var makeDic = MakeDictionary(tokens: tokens)
