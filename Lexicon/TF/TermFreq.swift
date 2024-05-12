@@ -33,7 +33,7 @@ class TermFreq {
         var output: [String: [Double]] = [:]
         
         for dic in input {
-            var tempArr = dic.value
+            let tempArr = dic.value
             var bufferArr: [Double] = []
             for temp in tempArr {
                 var buffer: Double = 0.0
