@@ -19,6 +19,12 @@ tokenizer.setStopWord(string: stopWord)
 var tokens = tokenizer.dataTokenizer(data: content)
 var stemmer = Stemmer()
 
+var documentSeperator = DocumentSeprator()
+var seperatedDoc = documentSeperator.seperator(data: content)
+
+for doc in seperatedDoc {
+    print(doc)
+}
 
 //for token in tokens {
 //    print(token.getToken())
@@ -26,9 +32,9 @@ var stemmer = Stemmer()
 //    print("-------------------------------")
 //}
 
-var makeDic = MakeDictionary(tokens: tokens)
-var dictionary = makeDic.freqDictionary()
+//var makeDic = MakeDictionary(tokens: tokens)
+//var dictionary = makeDic.freqDictionary()
 
-for dic in dictionary {
-    print(dic)
-}
+//for dic in dictionary {
+//    print(dic)
+//}
