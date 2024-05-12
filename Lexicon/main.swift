@@ -41,10 +41,11 @@ var dictionary = makeDic.freqDictionary()
 
 var termFreq = TermFreq()
 var freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+var tf = termFreq.calcTF(termFrequency: freq)
 
-for fre in freq {
+for fre in tf {
     print(fre.key)
     print(fre.value)
     print("-------------------------------")
 }
-print(freq.count)
+//print(freq.count)

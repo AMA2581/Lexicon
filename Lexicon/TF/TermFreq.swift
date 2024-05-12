@@ -28,4 +28,25 @@ class TermFreq {
         
         return output
     }
+    
+    func calcTF(termFrequency input: [String: [Int]]) -> [String: [Double]] {
+        var output: [String: [Double]] = [:]
+        
+        for dic in input {
+            var tempArr = dic.value
+            var bufferArr: [Double] = []
+            for temp in tempArr {
+                var buffer: Double = 0.0
+                if temp > 0 {
+                    buffer = 1.0 + log10(Double(temp))
+                } else {
+                    buffer = 0
+                }
+                bufferArr.append(buffer)
+            }
+            output[dic.key] = bufferArr
+        }
+        
+        return output
+    }
 }
