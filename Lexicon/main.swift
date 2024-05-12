@@ -22,9 +22,9 @@ var stemmer = Stemmer()
 var documentSeperator = DocumentSeprator()
 var seperatedDoc = documentSeperator.seperator(data: content)
 
-for doc in seperatedDoc {
-    print(doc)
-}
+//for doc in seperatedDoc {
+//    print(doc)
+//}
 
 //for token in tokens {
 //    print(token.getToken())
@@ -32,9 +32,19 @@ for doc in seperatedDoc {
 //    print("-------------------------------")
 //}
 
-//var makeDic = MakeDictionary(tokens: tokens)
-//var dictionary = makeDic.freqDictionary()
+var makeDic = MakeDictionary(tokens: tokens)
+var dictionary = makeDic.freqDictionary()
 
 //for dic in dictionary {
 //    print(dic)
 //}
+
+var termFreq = TermFreq()
+var freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+
+for fre in freq {
+    print(fre.key)
+    print(fre.value)
+    print("-------------------------------")
+}
+print(freq.count)
