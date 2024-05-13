@@ -34,6 +34,7 @@
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
 		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
+		2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB4A772BF0D87900E7BB88 /* IDF.swift */; };
 		2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB517F2BEFCC51000DA516 /* DocumentSeprator.swift */; };
 		2EFB51812BEFCEC0000DA516 /* DocumentSeprator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB517F2BEFCC51000DA516 /* DocumentSeprator.swift */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,7 @@
 		2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
 		2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenProcessor.swift; sourceTree = "<group>"; };
 		2EF10D9E2BD90C3900FEE478 /* TokenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenType.swift; sourceTree = "<group>"; };
+		2EFB4A772BF0D87900E7BB88 /* IDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDF.swift; sourceTree = "<group>"; };
 		2EFB517F2BEFCC51000DA516 /* DocumentSeprator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentSeprator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
+				2EFB4A762BF0D84D00E7BB88 /* IDF */,
 				2ED89CF02BDE246300C44634 /* Stemmer */,
 				2EFB517E2BEFCBD1000DA516 /* TF */,
 				2E0ECFA02BD7F6900068048C /* Token */,
@@ -223,6 +226,14 @@
 				2ED89CF12BDE24A900C44634 /* PyStemmer.py */,
 			);
 			path = Stemmer;
+			sourceTree = "<group>";
+		};
+		2EFB4A762BF0D84D00E7BB88 /* IDF */ = {
+			isa = PBXGroup;
+			children = (
+				2EFB4A772BF0D87900E7BB88 /* IDF.swift */,
+			);
+			path = IDF;
 			sourceTree = "<group>";
 		};
 		2EFB517E2BEFCBD1000DA516 /* TF */ = {
@@ -341,6 +352,7 @@
 				2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */,
 				2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */,
 				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
+				2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */,
 				2E1EAFE32BE24D3600227503 /* Model.swift in Sources */,
 				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
 				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
