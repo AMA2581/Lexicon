@@ -30,7 +30,7 @@ class IDF {
     
     func idf(df datas: [String: Int]) -> [String: Double] {
         var output: [String: Double] = [:]
-        var n = datas.count
+        let n = datas.count
         
         for data in datas {
             output[data.key] = log10(Double(n)/Double(data.value)) // log10(n/df)
