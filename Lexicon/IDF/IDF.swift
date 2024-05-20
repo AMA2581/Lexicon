@@ -38,4 +38,23 @@ class IDF {
         
         return output
     }
+    
+    func tfIdf(tf tfs: [String: [Double]],
+               idf idfs: [String: Double]) -> [String: [Double]] {
+        var output: [String: [Double]] = [:]
+        
+        for idf in idfs {
+            for tf in tfs {
+                if idf.key == tf.key {
+                    var buffer: [Double] = []
+                    for value in tf.value {
+                        buffer.append((idf.value * value))
+                    }
+                    output[tf.key] = buffer
+                }
+            }
+        }
+        
+        return output
+    }
 }

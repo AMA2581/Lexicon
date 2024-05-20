@@ -46,8 +46,9 @@ var tf = termFreq.calcTF(termFrequency: freq)
 var idfObj = IDF()
 var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
 var idf = idfObj.idf(df: df)
+var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
-for fre in idf {
+for fre in tfIdf {
     print(fre.key)
     print(fre.value)
     print("-------------------------------")
