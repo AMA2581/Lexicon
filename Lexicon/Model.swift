@@ -56,9 +56,14 @@ class Model {
     }
     
     func start() -> [String: Int] {
+        var documentSeperator = DocumentSeprator()
+        var termFreq = TermFreq()
+        var idfObj = IDF()
+        
         var content: String?
         var stopWord: String?
         var tokens: [Token] = []
+        var seperatedDoc: [[String]] = []
         
         if let URL = fileURL {
             content = fileReader.readFile(fileURL: URL)
@@ -71,10 +76,19 @@ class Model {
         
         if let safeContent = content {
             tokens = tokenizer.dataTokenizer(data: safeContent)
+            seperatedDoc = documentSeperator.seperator(data: safeContent)
         }
+        
         
         var makeDic = MakeDictionary(tokens: tokens)
         var dictionary = makeDic.freqDictionary()
+        
+        var freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        var tf = termFreq.calcTF(termFrequency: freq)
+
+        var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        var idf = idfObj.idf(df: df)
+        var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
         
         return dictionary
     }

@@ -74,7 +74,11 @@ class FilePickerViewModel: ObservableObject {
         var out = ""
         
         for result in results! {
-            out += "\(result.key): \(result.value)\n"
+            out += "\(result.key): "
+            for value in result.value {
+                out += "\(value), "
+            }
+            out += "\n"
         }
         
         return out

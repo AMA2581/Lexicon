@@ -31,6 +31,8 @@
 		2EA1E4562BE212450047C41E /* PyStemmer.py in Resources */ = {isa = PBXBuildFile; fileRef = 2ED89CF12BDE24A900C44634 /* PyStemmer.py */; };
 		2EA1E4582BE212560047C41E /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2EA1E4572BE212560047C41E /* PythonKit */; };
 		2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED89CEE2BDE245700C44634 /* Stemmer.swift */; };
+		2EE71BFA2BFCE77700CC4021 /* TermFreq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CBF2B2BF09763005F0CF4 /* TermFreq.swift */; };
+		2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB4A772BF0D87900E7BB88 /* IDF.swift */; };
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
 		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
@@ -371,6 +373,7 @@
 				2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */,
 				2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */,
 				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
+				2EE71BFA2BFCE77700CC4021 /* TermFreq.swift in Sources */,
 				2EA1E4502BE212310047C41E /* FileReader.swift in Sources */,
 				2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */,
 				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
@@ -378,6 +381,7 @@
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
 				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
 				2E1EAFE42BE24D3600227503 /* Model.swift in Sources */,
+				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
 				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
