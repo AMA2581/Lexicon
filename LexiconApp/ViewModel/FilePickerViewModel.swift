@@ -20,6 +20,9 @@ import Foundation
 class FilePickerViewModel: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     @Published private(set) var results: [String: Int]?
+    @Published private(set) var tf: [String: [Double]]?
+    @Published private(set) var idf: [String: Double]?
+    @Published private(set) var tfIdf: [String: [Double]]?
     @Published private(set) var isRunning = false
     var model = Model()
     
@@ -60,27 +63,66 @@ class FilePickerViewModel: ObservableObject {
     func isFileNil() -> Bool {
         return model.isFileNil()
     }
+
+    func isDoneRunning() -> Bool {
+        if tf != nil && idf != nil && tfIdf != nil {
+            return true
+        } else {
+            return false
+        }
+    }
     
     func start() {
         isRunning = true
         let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
         concurrentQueue.sync {
-            results = model.start()
+            model.start()
+            tf = model.tf
+            idf = model.idf
+            tfIdf = model.tfIdf
             isRunning = false
         }
     }
-    
-    func resultToStr() -> String {
+
+    func toStrTF() -> String {
         var out = ""
-        
-        for result in results! {
-            out += "\(result.key): "
-            for value in result.value {
+
+        for item in tf! {
+            out += "\(item.key): "
+            for value in item.value {
                 out += "\(value), "
             }
             out += "\n"
         }
-        
+    
         return out
     }
+
+    func toStrIDF() -> String {
+        var out = ""
+
+        return out
+    }
+
+    func toStrTFIDF() -> String {
+        var out = ""
+
+        return out
+    }
+    
+//    func resultToStr() -> String {
+//        var out = ""
+//        
+//        for result in model.tf {
+//            out += "\(result.key): "
+//           for value in result.value {
+//                out += "\(value), "
+//            }
+//            out += "\n"
+//        }
+//        
+//        return out
+//    }
+
+
 }

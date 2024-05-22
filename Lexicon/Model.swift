@@ -23,9 +23,9 @@ class Model {
     private var fileURL: URL?
     private var stopWordURL: URL?
 
-    private var tf: [String: [Double]] = [:]
-    private var idf: [String: Double] = [:]
-    private var tfIdf: [String: [Double]] = [:]
+    var tf: [String: [Double]] = [:]
+    var idf: [String: Double] = [:]
+    var tfIdf: [String: [Double]] = [:]
 
     func setFile(fileURL: URL) {
         self.fileURL = fileURL
@@ -89,10 +89,8 @@ class Model {
         
         var freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
         tf = termFreq.calcTF(termFrequency: freq)
-        df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
         idf = idfObj.idf(df: df)
         var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
-        
-        return dictionary
     }
 }
