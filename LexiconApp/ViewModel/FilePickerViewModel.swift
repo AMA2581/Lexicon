@@ -100,13 +100,23 @@ class FilePickerViewModel: ObservableObject {
 
     func toStrIDF() -> String {
         var out = ""
+        
+        for item in idf! {
+            out += "\(item.key): \(item.value)\n"
+        }
 
         return out
     }
 
     func toStrTFIDF() -> String {
         var out = ""
-
+        for item in tf! {
+            out += "\(item.key): "
+            for value in item.value {
+                out += "\(value), "
+            }
+            out += "\n"
+        }
         return out
     }
     
