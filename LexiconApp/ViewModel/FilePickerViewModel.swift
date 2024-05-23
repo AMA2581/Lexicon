@@ -74,25 +74,27 @@ class FilePickerViewModel: ObservableObject {
     
     func start() {
         isRunning = true
-        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
-        concurrentQueue.sync {
+//        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
+//        concurrentQueue.sync {
             model.start()
             tf = model.tf
             idf = model.idf
             tfIdf = model.tfIdf
             isRunning = false
-        }
+//        }
     }
 
     func toStrTF() -> String {
         var out = ""
-
-        for item in tf! {
-            out += "\(item.key): "
-            for value in item.value {
-                out += "\(value), "
+        
+        if tf != nil {
+            for item in tf! {
+                out += "\(item.key): "
+                for value in item.value {
+                    out += "\(value), "
+                }
+                out += "\n"
             }
-            out += "\n"
         }
     
         return out
@@ -101,8 +103,10 @@ class FilePickerViewModel: ObservableObject {
     func toStrIDF() -> String {
         var out = ""
         
-        for item in idf! {
-            out += "\(item.key): \(item.value)\n"
+        if idf != nil {
+            for item in idf! {
+                out += "\(item.key): \(item.value)\n"
+            }
         }
 
         return out
@@ -110,13 +114,17 @@ class FilePickerViewModel: ObservableObject {
 
     func toStrTFIDF() -> String {
         var out = ""
-        for item in tf! {
-            out += "\(item.key): "
-            for value in item.value {
-                out += "\(value), "
+        
+        if tfIdf != nil {
+            for item in tfIdf! {
+                out += "\(item.key): "
+                for value in item.value {
+                    out += "\(value), "
+                }
+                out += "\n"
             }
-            out += "\n"
         }
+        
         return out
     }
     

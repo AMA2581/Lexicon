@@ -60,9 +60,9 @@ class Model {
     }
     
     func start() {
-        var documentSeperator = DocumentSeprator()
-        var termFreq = TermFreq()
-        var idfObj = IDF()
+        let documentSeperator = DocumentSeprator()
+        let termFreq = TermFreq()
+        let idfObj = IDF()
         
         var content: String?
         var stopWord: String?
@@ -84,13 +84,13 @@ class Model {
         }
         
         
-        var makeDic = MakeDictionary(tokens: tokens)
-        var dictionary = makeDic.freqDictionary()
+        let makeDic = MakeDictionary(tokens: tokens)
+        let dictionary = makeDic.freqDictionary()
         
-        var freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
         tf = termFreq.calcTF(termFrequency: freq)
-        var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
         idf = idfObj.idf(df: df)
-        var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
+        tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
     }
 }
