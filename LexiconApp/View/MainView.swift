@@ -20,6 +20,7 @@ import SwiftUI
 struct MainView: View {
     var body: some View {
         NavigationStack {
+            // TODO: add swiftUI for tf and idf and ifidf
             FilePickerView()
         }
         .padding(.all, 25)

@@ -22,7 +22,11 @@ class Model {
     
     private var fileURL: URL?
     private var stopWordURL: URL?
-    
+
+    var tf: [String: [Double]] = [:]
+    var idf: [String: Double] = [:]
+    var tfIdf: [String: [Double]] = [:]
+
     func setFile(fileURL: URL) {
         self.fileURL = fileURL
     }
@@ -55,10 +59,15 @@ class Model {
         }
     }
     
-    func start() -> [String: Int] {
+    func start() {
+        let documentSeperator = DocumentSeprator()
+        let termFreq = TermFreq()
+        let idfObj = IDF()
+        
         var content: String?
         var stopWord: String?
         var tokens: [Token] = []
+        var seperatedDoc: [[String]] = []
         
         if let URL = fileURL {
             content = fileReader.readFile(fileURL: URL)
@@ -70,12 +79,18 @@ class Model {
         }
         
         if let safeContent = content {
-            tokens = tokenizer.tokenizer(data: safeContent)
+            tokens = tokenizer.dataTokenizer(data: safeContent)
+            seperatedDoc = documentSeperator.seperator(data: safeContent)
         }
         
-        var makeDic = MakeDictionary(tokens: tokens)
-        var dictionary = makeDic.freqDictionary()
         
-        return dictionary
+        let makeDic = MakeDictionary(tokens: tokens)
+        let dictionary = makeDic.freqDictionary()
+        
+        let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        tf = termFreq.calcTF(termFrequency: freq)
+        let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+        idf = idfObj.idf(df: df)
+        tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
     }
 }
