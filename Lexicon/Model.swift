@@ -26,6 +26,7 @@ class Model {
     var tf: [String: [Double]] = [:]
     var idf: [String: Double] = [:]
     var tfIdf: [String: [Double]] = [:]
+    var isRunning = false
 
     func setFile(fileURL: URL) {
         self.fileURL = fileURL
@@ -68,29 +69,37 @@ class Model {
         var stopWord: String?
         var tokens: [Token] = []
         var seperatedDoc: [[String]] = []
-        
-        if let URL = fileURL {
-            content = fileReader.readFile(fileURL: URL)
+        isRunning = true
+       
+        DispatchQueue.global().async {
+            if let URL = self.fileURL {
+                content = self.fileReader.readFile(fileURL: URL)
+            }
+            
+            if let URL = self.stopWordURL {
+                stopWord = self.fileReader.readFile(fileURL: URL)
+                self.tokenizer.setStopWord(string: stopWord!)
+            }
         }
-        
-        if let URL = stopWordURL {
-            stopWord = fileReader.readFile(fileURL: URL)
-            tokenizer.setStopWord(string: stopWord!)
-        }
-        
+       
+        // DO NOT MAKE THIS CONCURRENT
+        // IT WILL RUIN THE PYTHONKIT AND IT
+        // WON'T WORK
         if let safeContent = content {
             tokens = tokenizer.dataTokenizer(data: safeContent)
             seperatedDoc = documentSeperator.seperator(data: safeContent)
         }
         
-        
-        let makeDic = MakeDictionary(tokens: tokens)
-        let dictionary = makeDic.freqDictionary()
-        
-        let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
-        tf = termFreq.calcTF(termFrequency: freq)
-        let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-        idf = idfObj.idf(df: df)
-        tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
+        DispatchQueue.global().async {
+            let makeDic = MakeDictionary(tokens: tokens)
+            let dictionary = makeDic.freqDictionary()
+            
+            let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+            self.tf = termFreq.calcTF(termFrequency: freq)
+            let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+            self.idf = idfObj.idf(df: df)
+            self.tfIdf = idfObj.tfIdf(tf: self.tf, idf: self.idf)
+            self.isRunning = false
+        }
     }
 }
