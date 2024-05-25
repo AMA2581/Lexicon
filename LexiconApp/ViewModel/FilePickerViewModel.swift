@@ -76,6 +76,7 @@ class FilePickerViewModel: ObservableObject {
 //        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
 //        concurrentQueue.sync {
         model.start()
+        // TODO: fix the isRunning being stuck issue
         isRunning = model.isRunning
         tf = model.tf
         idf = model.idf
