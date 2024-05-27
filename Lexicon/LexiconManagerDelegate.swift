@@ -7,8 +7,8 @@
 
 import Foundation
 
-protocol ModelDelegate {
-    func didStartTraining(_ model: Model)
-    func didFinishTraining(_ model: Model)
+protocol LexiconManagerDelegate {
+    func didStartTraining(_ model: LexiconModel)
+    func didFinishTraining(_ model: LexiconModel)
     func didFail(error: Error)
 }

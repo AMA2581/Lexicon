@@ -24,7 +24,7 @@ class FilePickerViewModel: ObservableObject {
     @Published private(set) var idf: [String: Double]?
     @Published private(set) var tfIdf: [String: [Double]]?
     @Published private(set) var isRunning = false
-    var model = Model()
+    var model = LexiconModel()
 
     func pickDocument(isSW: Bool) {
         let panel = NSOpenPanel()

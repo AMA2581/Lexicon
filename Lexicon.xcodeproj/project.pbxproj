@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E058B232C050D11009323B4 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* ModelDelegate.swift */; };
-		2E058B242C050D11009323B4 /* ModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* ModelDelegate.swift */; };
+		2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
+		2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
+		2E058B262C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
+		2E058B272C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
 		2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
 		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
 		2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1EAFDC2BE212AE00227503 /* PythonKit */; };
 		2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */; };
 		2E1EAFE12BE244C500227503 /* FilePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */; };
-		2E1EAFE32BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
-		2E1EAFE42BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
+		2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
+		2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
 		2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
@@ -56,7 +58,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E058B222C050D11009323B4 /* ModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelDelegate.swift; sourceTree = "<group>"; };
+		2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManagerDelegate.swift; sourceTree = "<group>"; };
+		2E058B252C051761009323B4 /* LexiconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManager.swift; sourceTree = "<group>"; };
 		2E0ECF942BD7C2FD0068048C /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
 		2E0ECF962BD7C9500068048C /* cacm.all */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cacm.all; sourceTree = "<group>"; };
 		2E0ECF972BD7C9500068048C /* cite.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cite.info; sourceTree = "<group>"; };
@@ -67,7 +70,7 @@
 		2E0ECF9E2BD7F6880068048C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerView.swift; sourceTree = "<group>"; };
 		2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerViewModel.swift; sourceTree = "<group>"; };
-		2E1EAFE22BE24D3600227503 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2E1EAFE22BE24D3600227503 /* LexiconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModel.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -168,8 +171,9 @@
 			children = (
 				2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */,
 				2E5F48922BD699A800C7A62F /* main.swift */,
-				2E1EAFE22BE24D3600227503 /* Model.swift */,
-				2E058B222C050D11009323B4 /* ModelDelegate.swift */,
+				2E1EAFE22BE24D3600227503 /* LexiconModel.swift */,
+				2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */,
+				2E058B252C051761009323B4 /* LexiconManager.swift */,
 				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
@@ -359,11 +363,12 @@
 				2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */,
 				2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */,
 				2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */,
+				2E058B262C051761009323B4 /* LexiconManager.swift in Sources */,
 				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
 				2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */,
-				2E1EAFE32BE24D3600227503 /* Model.swift in Sources */,
+				2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
-				2E058B232C050D11009323B4 /* ModelDelegate.swift in Sources */,
+				2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
 				2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */,
 			);
@@ -383,11 +388,12 @@
 				2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */,
 				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
 				2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
-				2E058B242C050D11009323B4 /* ModelDelegate.swift in Sources */,
+				2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
 				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
-				2E1EAFE42BE24D3600227503 /* Model.swift in Sources */,
+				2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
+				2E058B272C051761009323B4 /* LexiconManager.swift in Sources */,
 				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

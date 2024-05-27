@@ -16,7 +16,7 @@
 
 import Foundation
 
-class Model {
+class LexiconModel {
     private var fileReader = FileReader()
     private var tokenizer = Tokenizer()
     
