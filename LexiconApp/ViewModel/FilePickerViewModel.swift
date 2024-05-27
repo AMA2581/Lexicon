@@ -24,7 +24,7 @@ class FilePickerViewModel: ObservableObject {
     @Published private(set) var idf: [String: Double]?
     @Published private(set) var tfIdf: [String: [Double]]?
     @Published private(set) var isRunning = false
-    var model = LexiconModel()
+    var manager = LexiconManager()
 
     func pickDocument(isSW: Bool) {
         let panel = NSOpenPanel()
@@ -45,23 +45,23 @@ class FilePickerViewModel: ObservableObject {
     func saveFileUrl() {
         if let safeURL = selectedFileURL {
             print(safeURL)
-            model.setFile(fileURL: safeURL)
+            manager.setFile(fileURL: safeURL)
         }
     }
 
     func saveSWUrl() {
         if let safeURL = selectedFileURL {
             print(safeURL)
-            model.setStopWordFile(fileURL: safeURL)
+            manager.setStopWordFile(fileURL: safeURL)
         }
     }
 
     func isSWNil() -> Bool {
-        return model.isSWNil()
+        return manager.isSWNil()
     }
 
     func isFileNil() -> Bool {
-        return model.isFileNil()
+        return manager.isFileNil()
     }
 
     func isDoneRunning() -> Bool {
@@ -75,12 +75,12 @@ class FilePickerViewModel: ObservableObject {
     func start() {
 //        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
 //        concurrentQueue.sync {
-        model.start()
+        manager.start()
         // TODO: fix the isRunning being stuck issue
-        isRunning = model.isRunning
-        tf = model.tf
-        idf = model.idf
-        tfIdf = model.tfIdf
+        isRunning = manager.isRunning
+        tf = manager.tf
+        idf = manager.idf
+        tfIdf = manager.tfIdf
 //        }
     }
 
