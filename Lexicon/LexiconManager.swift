@@ -19,6 +19,32 @@ import Foundation
 class LexiconManager {
     var model = LexiconModel()
     
+    func setFile(fileURL: URL) {
+        model.setFile(fileURL: fileURL)
+    }
     
+    func setFile(fileString: String) {
+        model.setFile(fileString: fileString)
+    }
+    
+    func setStopWordFile(fileURL: URL) {
+        model.setStopWordFile(fileURL: fileURL)
+    }
+    
+    func setStopWordFile(fileString: String) {
+        model.setStopWordFile(fileString: fileString)
+    }
+    
+    func isFileNil() -> Bool {
+        return model.isFileNil()
+    }
+    
+    func isSWNil() -> Bool {
+        return model.isSWNil()
+    }
+    
+    // TODO: add proper start function and also give access to this object to change variables in Model.
+    // TODO: add delegate
+    // TODO: add proper logging system
     
 }
