@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LexiconManagerDelegate {
-    func didStartTraining(_ model: LexiconModel)
-    func didFinishTraining(_ model: LexiconModel)
+    func didStartTraining(_ manager: LexiconManager, model: LexiconModel)
+    func didUpdate(_ manager: LexiconManager, model: LexiconModel)
+    func didFinishTraining(_ manager: LexiconManager, model: LexiconModel)
     func didFail(error: Error)
 }
