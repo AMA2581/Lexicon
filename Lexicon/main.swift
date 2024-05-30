@@ -57,16 +57,20 @@ var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
 var idf = idfObj.idf(df: df)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
-for fre in tfIdf {
+// MARK: Input
+let tempInput = "A system developed at Harvard" // .I 1697
+
+var inputTokens = tokenizer.dataTokenizer(data: tempInput)
+var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
+
+var inputDF = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
+var inputIDF = idfObj.idf(df: inputDF)
+var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
+
+for fre in inputTF {
     print(fre.key)
     print(fre.value)
     print("-------------------------------")
 }
 //print(freq.count)
-
-
-let tempInput = ""
-
-var inputTokens = tokenizer.dataTokenizer(data: tempInput)
-
-
