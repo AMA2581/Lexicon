@@ -17,14 +17,20 @@
 import AppKit
 import Foundation
 
-class FilePickerViewModel: ObservableObject {
+class FilePickerViewModel: NSObject, ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     @Published private(set) var results: [String: Int]?
     @Published private(set) var tf: [String: [Double]]?
     @Published private(set) var idf: [String: Double]?
     @Published private(set) var tfIdf: [String: [Double]]?
-    @Published private(set) var isRunning = false
+    @Published private(set) var isTraining = false
+    @Published private(set) var isDoneTraining = false
     var manager = LexiconManager()
+    
+    override init() {
+        super.init()
+        manager.delegate = self
+    }
 
     func pickDocument(isSW: Bool) {
         let panel = NSOpenPanel()
@@ -75,12 +81,9 @@ class FilePickerViewModel: ObservableObject {
     func start() {
 //        let concurrentQueue = DispatchQueue(label: "backend", attributes: .concurrent)
 //        concurrentQueue.sync {
-        manager.start()
+        manager.startTraining()
         // TODO: fix the isRunning being stuck issue
-        isRunning = manager.isRunning
-        tf = manager.tf
-        idf = manager.idf
-        tfIdf = manager.tfIdf
+
 //        }
     }
 
@@ -141,4 +144,24 @@ class FilePickerViewModel: ObservableObject {
 //
 //        return out
 //    }
+}
+
+extension FilePickerViewModel: LexiconManagerDelegate {
+    func didStartTraining(_ manager: LexiconManager, model: LexiconModel) {
+        isTraining = true
+        isDoneTraining = false
+    }
+
+    func didUpdate(_ manager: LexiconManager, model: LexiconModel) {
+        // TODO: handle this
+    }
+
+    func didFinishTraining(_ manager: LexiconManager, model: LexiconModel) {
+        isTraining = false
+        isDoneTraining = true
+    }
+
+    func didFail(error: any Error) {
+        print(error)
+    }
 }

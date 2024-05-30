@@ -50,70 +50,67 @@ class LexiconManager {
     // TODO: add proper logging system
 
     func startTraining() {
-        self.delegate?.didStartTraining(self, model: model)
+        delegate?.didStartTraining(self, model: model)
 
-        DispatchQueue.global().async {
-            self.model.fetchContent()
-            // making sure it went without errors
-            if self.model.content != nil {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("Couldn't fetch content"))
-            }
-            
-            self.model.fetchSW()
-            if self.model.stopWord != nil {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("Couldn't fetch stopword"))
-            }
+        model.fetchContent()
+        // making sure it went without errors
+        if model.content != nil {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("Couldn't fetch content"))
+        }
+
+        model.fetchSW()
+        if model.stopWord != nil {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("Couldn't fetch stopword"))
         }
 
         // DO NOT MAKE THIS CONCURRENT
         // IT WILL RUIN THE PYTHONKIT AND IT
         // WON'T WORK
+
         model.fetchTokens()
         if !model.tokens.isEmpty {
-            self.delegate?.didUpdate(self, model: model)
+            delegate?.didUpdate(self, model: model)
         } else {
-            self.delegate?.didFail(error: fatalError("couldn't tokenize"))
+            delegate?.didFail(error: fatalError("couldn't tokenize"))
         }
         if !model.seperatedDoc.isEmpty {
-            self.delegate?.didUpdate(self, model: model)
+            delegate?.didUpdate(self, model: model)
         } else {
-            self.delegate?.didFail(error: fatalError("couldn't seperate documents"))
+            delegate?.didFail(error: fatalError("couldn't seperate documents"))
         }
 
-        DispatchQueue.global().async {
-            self.model.fetchDictionary()
-            if !self.model.dictionary.isEmpty {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("couldn't make frequency dictionary"))
-            }
-
-            self.model.fetchTF()
-            if !self.model.tf.isEmpty {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("couldn't make TF"))
-            }
-            
-            self.model.fetchIDF()
-            if !self.model.idf.isEmpty {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("couldn't make IDF"))
-            }
-           
-            self.model.fetchTFIDF()
-            if !self.model.tfIdf.isEmpty {
-                self.delegate?.didUpdate(self, model: self.model)
-            } else {
-                self.delegate?.didFail(error: fatalError("couldn't make TFIDF"))
-            }
-            
-            self.delegate?.didFinishTraining(self, model: self.model)
+        model.fetchDictionary()
+        if !model.dictionary.isEmpty {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("couldn't make frequency dictionary"))
         }
+
+        model.fetchTF()
+        if !model.tf.isEmpty {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("couldn't make TF"))
+        }
+
+        model.fetchIDF()
+        if !model.idf.isEmpty {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("couldn't make IDF"))
+        }
+
+        model.fetchTFIDF()
+        if !model.tfIdf.isEmpty {
+            delegate?.didUpdate(self, model: model)
+        } else {
+            delegate?.didFail(error: fatalError("couldn't make TFIDF"))
+        }
+
+        delegate?.didFinishTraining(self, model: model)
     }
 }

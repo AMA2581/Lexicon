@@ -21,9 +21,7 @@ struct FilePickerView: View {
     @StateObject private var viewModel = FilePickerViewModel()
 
     var body: some View {
-        if viewModel.isRunning {
-            Text("Running...")
-        } else if !viewModel.isRunning && !viewModel.isDoneRunning() {
+         if !viewModel.isTraining && !viewModel.isDoneTraining {
             VStack {
                 Button("Pick File") {
                     viewModel.pickDocument(isSW: false)
@@ -41,6 +39,8 @@ struct FilePickerView: View {
                     }
                 }
             }
+        } else if viewModel.isTraining && !viewModel.isDoneTraining {
+            Text("Running...")
         } else {
             ScrollView {
                 HStack {
