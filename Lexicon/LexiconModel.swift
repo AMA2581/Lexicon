@@ -106,7 +106,7 @@ class LexiconModel {
 
     func fetchIDF() {
         let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-        idf = idfObj.idf(df: df)
+        idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
     }
 
     func fetchTFIDF() {
@@ -152,7 +152,7 @@ class LexiconModel {
             let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
             self.tf = termFreq.calcTF(termFrequency: freq)
             let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-            self.idf = idfObj.idf(df: df)
+            self.idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
             self.tfIdf = idfObj.tfIdf(tf: self.tf, idf: self.idf)
             self.isRunning = false
         }

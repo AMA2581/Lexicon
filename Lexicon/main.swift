@@ -54,21 +54,24 @@ var tf = termFreq.calcTF(termFrequency: freq)
 
 var idfObj = IDF()
 var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-var idf = idfObj.idf(df: df)
+var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
 // MARK: Input
 let tempInput = "A system developed at Harvard" // .I 1697
 
 var inputTokens = tokenizer.dataTokenizer(data: tempInput)
-var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
+var inputMakeDic = MakeDictionary(tokens: inputTokens)
+var inputDic = inputMakeDic.freqDictionary()
+
+var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: inputDic)
 var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
 
-var inputDF = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-var inputIDF = idfObj.idf(df: inputDF)
+var inputDF = idfObj.df(seperatedDocument: seperatedDoc, dictionary: inputDic)
+var inputIDF = idfObj.idf(df: inputDF, documentCount: seperatedDoc.count)
 var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 
-for fre in inputTF {
+for fre in inputTFIDF {
     print(fre.key)
     print(fre.value)
     print("-------------------------------")
