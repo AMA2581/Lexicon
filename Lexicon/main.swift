@@ -63,3 +63,10 @@ for fre in tfIdf {
     print("-------------------------------")
 }
 //print(freq.count)
+
+
+let tempInput = ""
+
+var inputTokens = tokenizer.dataTokenizer(data: tempInput)
+
+
