@@ -24,6 +24,8 @@
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
 		2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
+		2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
+		2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
 		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
 		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
 		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
@@ -80,6 +82,7 @@
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeDictionary.swift; sourceTree = "<group>"; };
+		2E8390602C09D4FC005C0D8D /* CMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMath.swift; sourceTree = "<group>"; };
 		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
 		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,6 +200,7 @@
 				2E058B252C051761009323B4 /* LexiconManager.swift */,
 				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
+				2E83905F2C09D4E7005C0D8D /* CMath */,
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
 				2E545AB62C09211100031B23 /* DocItem */,
 				2EFB4A762BF0D84D00E7BB88 /* IDF */,
@@ -214,6 +218,14 @@
 				2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */,
 			);
 			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		2E83905F2C09D4E7005C0D8D /* CMath */ = {
+			isa = PBXGroup;
+			children = (
+				2E8390602C09D4FC005C0D8D /* CMath.swift */,
+			);
+			path = CMath;
 			sourceTree = "<group>";
 		};
 		2E88BB932BE1585D0066C106 /* LexiconApp */ = {
@@ -391,6 +403,7 @@
 				2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */,
 				2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
+				2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */,
 				2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2E4871882C08544700894201 /* Search.swift in Sources */,
 				2E545AB82C09212100031B23 /* DocItem.swift in Sources */,
@@ -420,6 +433,7 @@
 				2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
 				2E058B272C051761009323B4 /* LexiconManager.swift in Sources */,
+				2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */,
 				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

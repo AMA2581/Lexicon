@@ -29,7 +29,7 @@ var tokens = tokenizer.dataTokenizer(data: content)
 var stemmer = Stemmer()
 
 var documentSeperator = DocumentSeprator()
-var seperatedDoc = documentSeperator.seperator(data: content)
+var seperatedDoc = documentSeperator.seperator(data: content, type: "d")
 
 //for doc in seperatedDoc {
 //    print(doc)
@@ -58,22 +58,24 @@ var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
 // MARK: Input
-let tempInput = "A system developed at Harvard" // .I 1697
+let tempInput = "Texture analysis by computer. Digitized texture analysis. Texture synthesis. Perception of texture." // .I 44 query
 
 var inputTokens = tokenizer.dataTokenizer(data: tempInput)
+var inputSeperated = documentSeperator.seperator(data: tempInput, type: "q")
 var inputMakeDic = MakeDictionary(tokens: inputTokens)
 var inputDic = inputMakeDic.freqDictionary()
 
-var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: inputDic)
+var inputTermFreq = termFreq.termFrequency(seperatedDocument: inputSeperated, dictionary: inputDic)
 var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
 
-var inputDF = idfObj.df(seperatedDocument: seperatedDoc, dictionary: inputDic)
-var inputIDF = idfObj.idf(df: inputDF, documentCount: seperatedDoc.count)
+var inputDF = idfObj.df(seperatedDocument: inputSeperated, dictionary: inputDic)
+var inputIDF = idfObj.idf(df: inputDF, documentCount: inputSeperated.count)
 var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 
 for fre in inputTFIDF {
     print(fre.key)
     print(fre.value)
+//    print(fre)
     print("-------------------------------")
 }
 //print(freq.count)

@@ -90,7 +90,7 @@ class LexiconModel {
     func fetchTokens() {
         if let safeContent = content {
             tokens = tokenizer.dataTokenizer(data: safeContent)
-            seperatedDoc = documentSeperator.seperator(data: safeContent)
+            seperatedDoc = documentSeperator.seperator(data: safeContent, type: "d")
         }
     }
 
@@ -142,7 +142,7 @@ class LexiconModel {
         // WON'T WORK
         if let safeContent = content {
             tokens = tokenizer.dataTokenizer(data: safeContent)
-            seperatedDoc = documentSeperator.seperator(data: safeContent)
+            seperatedDoc = documentSeperator.seperator(data: safeContent, type: "d")
         }
 
         DispatchQueue.global().async {
