@@ -38,5 +38,12 @@ class CMath {
         return result
     }
     
-    
+    /// this if only for calculating IDF
+    func dotProduct(mainVector vectorA: Double, inputVector vectorB: Double) -> Double {
+        var result: Double = 0.0
+        
+        result = (vectorA * vectorB)
+        
+        return result
+    }
 }

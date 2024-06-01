@@ -47,6 +47,26 @@ class InputProcessor {
     func indexer(mainIDF: [String: Double],
                  inputIDF: [String: Double]) -> [String: Double] {
         var output: [String: Double] = [:]
+        var sameWords: [String: Double] = [:]
+
+        for tf in mainIDF {
+            for input in inputIDF {
+                if tf.key == input.key {
+                    sameWords[tf.key] = tf.value
+                }
+            }
+        }
+
+        for sameWord in sameWords {
+            for input in inputIDF {
+                if sameWord.key == input.key {
+                    output[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
+                                                            inputVector: input.value)
+                }
+            }
+        }
+
+        
         return output
     }
 
