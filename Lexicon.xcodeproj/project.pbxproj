@@ -26,6 +26,8 @@
 		2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
 		2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
 		2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
+		2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390642C0B0B98005C0D8D /* InputProcessor.swift */; };
+		2E8390662C0B0B98005C0D8D /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390642C0B0B98005C0D8D /* InputProcessor.swift */; };
 		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
 		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
 		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
@@ -83,6 +85,7 @@
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeDictionary.swift; sourceTree = "<group>"; };
 		2E8390602C09D4FC005C0D8D /* CMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMath.swift; sourceTree = "<group>"; };
+		2E8390642C0B0B98005C0D8D /* InputProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessor.swift; sourceTree = "<group>"; };
 		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
 		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -204,6 +207,7 @@
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
 				2E545AB62C09211100031B23 /* DocItem */,
 				2EFB4A762BF0D84D00E7BB88 /* IDF */,
+				2E8390632C0B0B67005C0D8D /* InputProcessor */,
 				2E4871862C0853F700894201 /* Search */,
 				2ED89CF02BDE246300C44634 /* Stemmer */,
 				2EFB517E2BEFCBD1000DA516 /* TF */,
@@ -226,6 +230,14 @@
 				2E8390602C09D4FC005C0D8D /* CMath.swift */,
 			);
 			path = CMath;
+			sourceTree = "<group>";
+		};
+		2E8390632C0B0B67005C0D8D /* InputProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				2E8390642C0B0B98005C0D8D /* InputProcessor.swift */,
+			);
+			path = InputProcessor;
 			sourceTree = "<group>";
 		};
 		2E88BB932BE1585D0066C106 /* LexiconApp */ = {
@@ -405,6 +417,7 @@
 				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
 				2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */,
 				2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
+				2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
 				2E4871882C08544700894201 /* Search.swift in Sources */,
 				2E545AB82C09212100031B23 /* DocItem.swift in Sources */,
 				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
@@ -431,6 +444,7 @@
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
 				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
 				2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */,
+				2E8390662C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
 				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
 				2E058B272C051761009323B4 /* LexiconManager.swift in Sources */,
 				2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */,

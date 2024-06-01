@@ -19,7 +19,7 @@ import Foundation
 class CMath {
     
     /// before calling this function make sure you do the padding first
-    func dotProduct(mainVector vectorA: [Double], inputVector vectorB: [Double]) -> Double? {
+    func dotProduct(mainVector vectorA: [Double], inputVector vectorB: [Double]) -> [Double]? {
         
         // TODO: add multi value vector for inputVector
         
@@ -30,11 +30,13 @@ class CMath {
         }
         
         // Calculate the dot product
-        var result: Double = 0
+        var result: [Double] = []
         for i in 0..<vectorA.count {
-            result += vectorA[i] * vectorB[1]
+            result.append(vectorA[i] * vectorB[1])
         }
         
         return result
     }
+    
+    
 }
