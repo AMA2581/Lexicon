@@ -17,5 +17,18 @@
 import Foundation
 
 class InputProcessor {
-    
+    func indexer(mainTF: [String: [Double]], inputTF: [String: [Double]]) -> [String: [Double]] {
+        var output: [String: [Double]] = [:]
+        return output
+    }
+
+    func indexer(mainIDF: [String: Double], inputIDF: [String: Double]) -> [String: Double] {
+        var output: [String: Double] = [:]
+        return output
+    }
+
+    func indexer(mainTFIDF: [String: [Double]], inputTFIDF: [String: [Double]]) -> [String: [Double]] {
+        var output: [String: [Double]] = [:]
+        return output
+    }
 }
