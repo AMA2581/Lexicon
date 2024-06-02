@@ -72,7 +72,12 @@ var inputDF = idfObj.df(seperatedDocument: inputSeperated, dictionary: inputDic)
 var inputIDF = idfObj.idf(df: inputDF, documentCount: inputSeperated.count)
 var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 
-for fre in inputTFIDF {
+var inputProcessor = InputProcessor()
+var indexedTF = inputProcessor.dotProducter(mainTF: tf, inputTF: inputTF)
+var indexedIDF = inputProcessor.dotProducter(mainIDF: idf, inputIDF: inputIDF)
+var indexedTFIDF = inputProcessor.dotProducter(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
+
+for fre in indexedTFIDF {
     print(fre.key)
     print(fre.value)
 //    print(fre)

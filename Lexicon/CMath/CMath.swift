@@ -32,7 +32,7 @@ class CMath {
         // Calculate the dot product
         var result: [Double] = []
         for i in 0..<vectorA.count {
-            result.append(vectorA[i] * vectorB[1])
+            result.append(vectorA[i] * vectorB[0])
         }
         
         return result

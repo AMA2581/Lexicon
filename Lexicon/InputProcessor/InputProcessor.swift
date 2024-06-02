@@ -19,7 +19,7 @@ import Foundation
 class InputProcessor {
     let cmath = CMath()
 
-    func indexer(mainTF: [String: [Double]],
+    func dotProducter(mainTF: [String: [Double]],
                  inputTF: [String: [Double]]) -> [String: [Double]] {
         var output: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
@@ -44,7 +44,7 @@ class InputProcessor {
         return output
     }
 
-    func indexer(mainIDF: [String: Double],
+    func dotProducter(mainIDF: [String: Double],
                  inputIDF: [String: Double]) -> [String: Double] {
         var output: [String: Double] = [:]
         var sameWords: [String: Double] = [:]
@@ -70,7 +70,7 @@ class InputProcessor {
         return output
     }
 
-    func indexer(mainTFIDF: [String: [Double]],
+    func dotProducter(mainTFIDF: [String: [Double]],
                  inputTFIDF: [String: [Double]]) -> [String: [Double]] {
         var output: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
