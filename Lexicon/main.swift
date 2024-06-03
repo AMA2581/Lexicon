@@ -58,7 +58,7 @@ var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
 // MARK: Input
-let tempInput = "Texture analysis by computer. Digitized texture analysis. Texture synthesis. Perception of texture." // .I 44 query
+let tempInput = "The numerical solution of a system of linear" // .I 44 query
 
 var inputTokens = tokenizer.dataTokenizer(data: tempInput)
 var inputSeperated = documentSeperator.seperator(data: tempInput, type: "q")
@@ -75,12 +75,14 @@ var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 var inputProcessor = InputProcessor()
 //var dotProductTF = inputProcessor.dotProducter(mainTF: tf, inputTF: inputTF)
 //var dotProductIDF = inputProcessor.dotProducter(mainIDF: idf, inputIDF: inputIDF)
-var dotProductTFIDF = inputProcessor.dotProducter(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
+//var dotProductTFIDF = inputProcessor.dotProducter(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
 
 
-var mainNorm = inputProcessor.norm(TFIDF: tfIdf)
+//var mainNorm = inputProcessor.norm(TFIDF: tfIdf)
 
-for fre in mainNorm {
+var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
+
+for fre in cosine {
     print(fre.key)
     print(fre.value)
 //    print(fre)

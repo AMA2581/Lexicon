@@ -18,6 +18,31 @@ import Foundation
 
 class InputProcessor {
     let cmath = CMath()
+    
+    func getCosine(mainTFIDF: [String: [Double]],
+                   inputTFIDF: [String: [Double]]) -> [DocItem] {
+        var output: [DocItem] = []
+        var dotProduct = dotProducter(mainTFIDF: mainTFIDF, inputTFIDF: inputTFIDF)
+        var mainNorm = norm(TFIDF: mainTFIDF)
+        var inputNorm = norm(TFIDF: inputTFIDF)
+        var norm: [DocItem] = []
+        
+        for buffer in mainNorm {
+            for input in inputNorm {
+                norm.append(DocItem(key: buffer.key, value: (buffer.value * input.value)))
+            }
+        }
+        
+        for doc in dotProduct {
+            for temp in norm {
+                if temp.key == doc.key {
+                    output.append(DocItem(key: doc.key, value: (doc.value / temp.value)))
+                }
+            }
+        }
+        
+        return output
+    }
 
     func dotProducter(mainTF: [String: [Double]],
                       inputTF: [String: [Double]]) -> [DocItem] {
