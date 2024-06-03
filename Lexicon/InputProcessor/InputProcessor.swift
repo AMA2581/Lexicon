@@ -20,9 +20,11 @@ class InputProcessor {
     let cmath = CMath()
 
     func dotProducter(mainTF: [String: [Double]],
-                 inputTF: [String: [Double]]) -> [String: [Double]] {
-        var output: [String: [Double]] = [:]
+                 inputTF: [String: [Double]]) -> [DocItem] {
+        var output: [DocItem] = []
+        var buffers: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
+        var count: Int = 0
 
         for tf in mainTF {
             for input in inputTF {
@@ -35,10 +37,22 @@ class InputProcessor {
         for sameWord in sameWords {
             for input in inputTF {
                 if sameWord.key == input.key {
-                    output[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
+                    buffers[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
                                                             inputVector: input.value)
                 }
             }
+        }
+        
+        for buffer in buffers {
+            count = buffer.value.count
+        }
+        
+        for i in 0 ..< count {
+            var temp = 0.0
+            for buffer in buffers {
+                temp += buffer.value[i]
+            }
+            output.append(DocItem(key: i, value: temp))
         }
 
         return output
@@ -71,9 +85,11 @@ class InputProcessor {
     }
 
     func dotProducter(mainTFIDF: [String: [Double]],
-                 inputTFIDF: [String: [Double]]) -> [String: [Double]] {
-        var output: [String: [Double]] = [:]
+                 inputTFIDF: [String: [Double]]) -> [DocItem] {
+        var output: [DocItem] = []
+        var buffers: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
+        var count: Int = 0
 
         for tf in mainTFIDF {
             for input in inputTFIDF {
@@ -86,12 +102,23 @@ class InputProcessor {
         for sameWord in sameWords {
             for input in inputTFIDF {
                 if sameWord.key == input.key {
-                    output[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
+                    buffers[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
                                                             inputVector: input.value)
                 }
             }
         }
-
+        
+        for buffer in buffers {
+            count = buffer.value.count
+        }
+        
+        for i in 0 ..< count {
+            var temp = 0.0
+            for buffer in buffers {
+                temp += buffer.value[i]
+            }
+            output.append(DocItem(key: i, value: temp))
+        }
 
         return output
     }
