@@ -58,7 +58,7 @@ var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
 // MARK: Input
-let tempInput = "The numerical solution of a system of linear" // .I 44 query
+let tempInput = "Numerical Solution of the Polynomial Equation" // .I 44 query
 
 var inputTokens = tokenizer.dataTokenizer(data: tempInput)
 var inputSeperated = documentSeperator.seperator(data: tempInput, type: "q")
@@ -75,7 +75,10 @@ var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 var inputProcessor = InputProcessor()
 var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
 
-for fre in cosine {
+var sortObj = Sort()
+var sortedCosine = sortObj.mergeSort(list: cosine)
+
+for fre in sortedCosine {
     print(fre.key)
     print(fre.value)
 //    print(fre)

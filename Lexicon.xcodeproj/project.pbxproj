@@ -20,6 +20,8 @@
 		2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
 		2E4871882C08544700894201 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4871872C08544700894201 /* Search.swift */; };
 		2E4871892C08544700894201 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4871872C08544700894201 /* Search.swift */; };
+		2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
+		2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
 		2E545AB82C09212100031B23 /* DocItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E545AB72C09212100031B23 /* DocItem.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
@@ -79,6 +81,7 @@
 		2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerViewModel.swift; sourceTree = "<group>"; };
 		2E1EAFE22BE24D3600227503 /* LexiconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModel.swift; sourceTree = "<group>"; };
 		2E4871872C08544700894201 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		2E51D26A2C0DEC6C009B8ADF /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		2E545AB72C09212100031B23 /* DocItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocItem.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +167,14 @@
 			path = Search;
 			sourceTree = "<group>";
 		};
+		2E51D2692C0DEC56009B8ADF /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				2E51D26A2C0DEC6C009B8ADF /* Sort.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
 		2E545AB62C09211100031B23 /* DocItem */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +220,7 @@
 				2EFB4A762BF0D84D00E7BB88 /* IDF */,
 				2E8390632C0B0B67005C0D8D /* InputProcessor */,
 				2E4871862C0853F700894201 /* Search */,
+				2E51D2692C0DEC56009B8ADF /* Sort */,
 				2ED89CF02BDE246300C44634 /* Stemmer */,
 				2EFB517E2BEFCBD1000DA516 /* TF */,
 				2E0ECFA02BD7F6900068048C /* Token */,
@@ -420,6 +432,7 @@
 				2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
 				2E4871882C08544700894201 /* Search.swift in Sources */,
 				2E545AB82C09212100031B23 /* DocItem.swift in Sources */,
+				2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */,
 				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
 				2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */,
 			);
@@ -440,6 +453,7 @@
 				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
 				2E4871892C08544700894201 /* Search.swift in Sources */,
 				2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
+				2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */,
 				2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
 				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
