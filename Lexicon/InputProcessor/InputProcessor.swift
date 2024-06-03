@@ -20,7 +20,7 @@ class InputProcessor {
     let cmath = CMath()
 
     func dotProducter(mainTF: [String: [Double]],
-                 inputTF: [String: [Double]]) -> [DocItem] {
+                      inputTF: [String: [Double]]) -> [DocItem] {
         var output: [DocItem] = []
         var buffers: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
@@ -38,15 +38,15 @@ class InputProcessor {
             for input in inputTF {
                 if sameWord.key == input.key {
                     buffers[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
-                                                            inputVector: input.value)
+                                                             inputVector: input.value)
                 }
             }
         }
-        
+
         for buffer in buffers {
             count = buffer.value.count
         }
-        
+
         for i in 0 ..< count {
             var temp = 0.0
             for buffer in buffers {
@@ -59,7 +59,7 @@ class InputProcessor {
     }
 
     func dotProducter(mainIDF: [String: Double],
-                 inputIDF: [String: Double]) -> [String: Double] {
+                      inputIDF: [String: Double]) -> [String: Double] {
         var output: [String: Double] = [:]
         var sameWords: [String: Double] = [:]
 
@@ -80,12 +80,11 @@ class InputProcessor {
             }
         }
 
-        
         return output
     }
 
     func dotProducter(mainTFIDF: [String: [Double]],
-                 inputTFIDF: [String: [Double]]) -> [DocItem] {
+                      inputTFIDF: [String: [Double]]) -> [DocItem] {
         var output: [DocItem] = []
         var buffers: [String: [Double]] = [:]
         var sameWords: [String: [Double]] = [:]
@@ -103,15 +102,15 @@ class InputProcessor {
             for input in inputTFIDF {
                 if sameWord.key == input.key {
                     buffers[sameWord.key] = cmath.dotProduct(mainVector: sameWord.value,
-                                                            inputVector: input.value)
+                                                             inputVector: input.value)
                 }
             }
         }
-        
+
         for buffer in buffers {
             count = buffer.value.count
         }
-        
+
         for i in 0 ..< count {
             var temp = 0.0
             for buffer in buffers {
@@ -120,6 +119,26 @@ class InputProcessor {
             output.append(DocItem(key: i, value: temp))
         }
 
+        return output
+    }
+
+    func norm(TFIDF: [String: [Double]]) -> [DocItem] {
+        var output: [DocItem] = []
+        var count = 0
+
+        for buffer in TFIDF {
+            count = buffer.value.count
+        }
+        
+        for i in 0 ..< count {
+            var temp = 0.0
+            for buffer in TFIDF {
+                temp += pow(buffer.value[i], 2)
+            }
+            temp = sqrt(temp)
+            output.append(DocItem(key: i, value: temp))
+        }
+        
         return output
     }
 }

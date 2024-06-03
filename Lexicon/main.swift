@@ -77,7 +77,10 @@ var inputProcessor = InputProcessor()
 //var dotProductIDF = inputProcessor.dotProducter(mainIDF: idf, inputIDF: inputIDF)
 var dotProductTFIDF = inputProcessor.dotProducter(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
 
-for fre in dotProductTFIDF {
+
+var mainNorm = inputProcessor.norm(TFIDF: tfIdf)
+
+for fre in mainNorm {
     print(fre.key)
     print(fre.value)
 //    print(fre)
