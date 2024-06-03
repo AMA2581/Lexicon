@@ -73,13 +73,6 @@ var inputIDF = idfObj.idf(df: inputDF, documentCount: inputSeperated.count)
 var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
 
 var inputProcessor = InputProcessor()
-//var dotProductTF = inputProcessor.dotProducter(mainTF: tf, inputTF: inputTF)
-//var dotProductIDF = inputProcessor.dotProducter(mainIDF: idf, inputIDF: inputIDF)
-//var dotProductTFIDF = inputProcessor.dotProducter(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
-
-
-//var mainNorm = inputProcessor.norm(TFIDF: tfIdf)
-
 var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
 
 for fre in cosine {
