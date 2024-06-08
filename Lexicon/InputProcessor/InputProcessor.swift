@@ -19,7 +19,7 @@ import Foundation
 class InputProcessor {
     let cmath = CMath()
     
-    func getCosine(mainTFIDF: [String: [Double]],
+    func getCosine(mainTFIDF: [String: [DocItem]],
                    inputTFIDF: [String: [Double]]) -> [DocItem] {
         var output: [DocItem] = []
         let dotProduct = dotProducter(mainTFIDF: mainTFIDF, inputTFIDF: inputTFIDF)
@@ -44,11 +44,11 @@ class InputProcessor {
         return output
     }
 
-    func dotProducter(mainTFIDF: [String: [Double]],
+    func dotProducter(mainTFIDF: [String: [DocItem]],
                       inputTFIDF: [String: [Double]]) -> [DocItem] {
         var output: [DocItem] = []
         var buffers: [String: [Double]] = [:]
-        var sameWords: [String: [Double]] = [:]
+        var sameWords: [String: [DocItem]] = [:]
         var count: Int = 0
 
         for tf in mainTFIDF {
@@ -83,7 +83,7 @@ class InputProcessor {
         return output
     }
 
-    func norm(TFIDF: [String: [Double]]) -> [DocItem] {
+    func norm(TFIDF: [String: [DocItem]]) -> [DocItem] {
         var output: [DocItem] = []
         var count = 0
 
@@ -94,7 +94,7 @@ class InputProcessor {
         for i in 0 ..< count {
             var temp = 0.0
             for buffer in TFIDF {
-                temp += pow(buffer.value[i], 2)
+                temp += pow(buffer.value[i].value, 2)
             }
             temp = sqrt(temp)
             output.append(DocItem(key: i, value: temp))
@@ -102,4 +102,24 @@ class InputProcessor {
         
         return output
     }
+    
+    func norm(TFIDF: [String: [Double]]) -> [DocItem] {
+            var output: [DocItem] = []
+            var count = 0
+
+            for buffer in TFIDF {
+                count = buffer.value.count
+            }
+            
+            for i in 0 ..< count {
+                var temp = 0.0
+                for buffer in TFIDF {
+                    temp += pow(buffer.value[i], 2)
+                }
+                temp = sqrt(temp)
+                output.append(DocItem(key: i, value: temp))
+            }
+            
+            return output
+        }
 }

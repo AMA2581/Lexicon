@@ -54,27 +54,32 @@ class LexiconModel {
     }
 
     func search(input: String) {
-        var inputTokens = tokenizer.dataTokenizer(data: input)
-        var inputSeperated = documentSeperator.seperator(data: input,
+        let inputTokens = tokenizer.dataTokenizer(data: input)
+        let inputSeperated = documentSeperator.seperator(data: input,
                                                          type: "q")
-        var inputMakeDic = MakeDictionary(tokens: inputTokens)
-        var inputDic = inputMakeDic.freqDictionary()
-        var inputTFIDF = getInputTFIDF(seperatedDoc: inputSeperated,
+        let inputMakeDic = MakeDictionary(tokens: inputTokens)
+        let inputDic = inputMakeDic.freqDictionary()
+        let inputTFIDF = getInputTFIDF(seperatedDoc: inputSeperated,
                                        dictionary: inputDic)
         
+        let inputProcessor = InputProcessor()
+        var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, 
+                                              inputTFIDF: inputTFIDF)
         
+        var sortObj = Sort()
+        var sortedCosine = sortObj.mergeSort(list: cosine)
     }
 
     private func getInputTFIDF(seperatedDoc: [[String]],
                                dictionary: [String: Int]) -> [String: [Double]] {
-        var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc,
+        let inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc,
                                                    dictionary: dictionary)
-        var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
-        var inputDF = idfObj.df(seperatedDocument: seperatedDoc,
+        let inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
+        let inputDF = idfObj.df(seperatedDocument: seperatedDoc,
                                 dictionary: dictionary)
-        var inputIDF = idfObj.idf(df: inputDF,
+        let inputIDF = idfObj.idf(df: inputDF,
                                   documentCount: seperatedDoc.count)
-        var inputTFIDF = idfObj.tfIdf(tf: inputTF,
+        let inputTFIDF = idfObj.tfIdf(tf: inputTF,
                                       idf: inputIDF)
         return inputTFIDF
     }

@@ -23,7 +23,7 @@ class TDProcessor {
     
     func TDProcessor(trainedData input: String) -> [String: [DocItem]] {
         var output: [String: [DocItem]] = [:]
-        var seperatedTDs = tokenizer.wordSeperator(input)
+        let seperatedTDs = tokenizer.wordSeperator(input)
         var bufferTerm = ""
         var bufferDocNum = 0
         var bufferDocRes = 0.0
