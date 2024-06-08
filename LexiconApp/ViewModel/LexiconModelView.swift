@@ -15,19 +15,21 @@
 // with this program;
 
 import AppKit
-import SwiftUI
+import Foundation
 
-struct FilePickerView: View {
-    @EnvironmentObject private var lexiconManager: LexiconManager
-    @StateObject private var viewModel = LexiconModelView()
+class LexiconModelView: ObservableObject {
+    @Published private(set) var selectedFileURL: URL?
 
-    var body: some View {
-        Button("pick trained file") {
-            viewModel.pickDocument()
+    func pickDocument() {
+        let panel = NSOpenPanel()
+        panel.allowsMultipleSelection = false
+        // only file that is acceptible is a .ama25 file that has to be created using Lexicon binary
+        // or being provided by valuable source
+        panel.allowedFileTypes = ["ama25"] // Adjust for file types
+
+        panel.beginSheetModal(for: .init()) { _ in
+//            print(panel.url)
+            self.selectedFileURL = panel.url
         }
     }
-}
-
-#Preview {
-    FilePickerView()
 }

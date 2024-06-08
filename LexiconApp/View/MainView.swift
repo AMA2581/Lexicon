@@ -19,11 +19,12 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject private var lexiconManager: LexiconManager
+    @StateObject private var viewModel = LexiconModelView()
     
     var body: some View {
         NavigationStack {
-            // TODO: add swiftUI for tf and idf and ifidf
             FilePickerView()
+                .environmentObject(lexiconManager)
         }
         .padding(.all, 25)
     }

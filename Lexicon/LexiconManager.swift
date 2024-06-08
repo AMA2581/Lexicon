@@ -21,28 +21,6 @@ class LexiconManager: ObservableObject {
 
     var delegate: LexiconManagerDelegate?
 
-    func setFile(fileURL: URL) {
-        model.setFile(fileURL: fileURL)
-    }
-
-    func setFile(fileString: String) {
-        model.setFile(fileString: fileString)
-    }
-
-    func setStopWordFile(fileURL: URL) {
-        model.setStopWordFile(fileURL: fileURL)
-    }
-
-    func setStopWordFile(fileString: String) {
-        model.setStopWordFile(fileString: fileString)
-    }
-
-    func isFileNil() -> Bool {
-        return model.isFileNil()
-    }
-
-    func isSWNil() -> Bool {
-        return model.isSWNil()
-    }
+    
 
 }

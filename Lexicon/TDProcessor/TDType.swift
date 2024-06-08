@@ -14,20 +14,9 @@
 // You should have received a copy of the GNU General Public License along
 // with this program;
 
-import AppKit
-import SwiftUI
+import Foundation
 
-struct FilePickerView: View {
-    @EnvironmentObject private var lexiconManager: LexiconManager
-    @StateObject private var viewModel = LexiconModelView()
-
-    var body: some View {
-        Button("pick trained file") {
-            viewModel.pickDocument()
-        }
-    }
-}
-
-#Preview {
-    FilePickerView()
+enum TDType {
+    case term
+    case document
 }

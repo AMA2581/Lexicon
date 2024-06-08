@@ -13,8 +13,57 @@
 //
 // You should have received a copy of the GNU General Public License along
 // with this program;
+
 import Foundation
 
 class TDProcessor {
+    var tokenizer = Tokenizer() // just to use the same word seperator logic
+    var typeFlag = TDType.term
+    var isDocNum = false
+    
+    func TDProcessor(trainedData input: String) -> [String: [DocItem]] {
+        var output: [String: [DocItem]] = [:]
+        var seperatedTDs = tokenizer.wordSeperator(input)
+        var bufferTerm = ""
+        var bufferDocNum = 0
+        var bufferDocRes = 0.0
+        var bufferDocItem: [DocItem] = []
+        
+        
+        for td in seperatedTDs {
+            if tokenizer.tokenProceessor.prefixCheck(td) {
+                typeCheck(td)
+            } else if typeFlag == .term {
+                if !bufferDocItem.isEmpty {
+                    output[bufferTerm] = bufferDocItem
+                    bufferDocItem = []
+                }
+                bufferTerm = td
+            } else if typeFlag == .document {
+                if td == "=" {
+                    isDocNum = false
+                } else if isDocNum {
+                    bufferDocNum = Int(td)!
+                } else if !isDocNum {
+                    bufferDocRes = Double(td)!
+                    bufferDocItem.append(DocItem(key: bufferDocNum,
+                                                 value: bufferDocRes))
+                }
+            }
+        }
+        
+        return output
+    }
+    
+    func typeCheck(_ input: String) {
+        switch input {
+        case ".T":
+            typeFlag = TDType.term
+        case ".D":
+            typeFlag = TDType.document
+        default:
+            typeFlag = TDType.term
+        }
+    }
     
 }
