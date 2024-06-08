@@ -16,7 +16,7 @@
 
 import Foundation
 
-struct FileReader {
+struct FileMgr {
     
     func fileUrlGetter(datasetFolderUrl DFURL: URL?) -> [URL] {
         let datasetFolderURL = DFURL

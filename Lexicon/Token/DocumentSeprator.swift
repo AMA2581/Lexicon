@@ -22,7 +22,7 @@ class DocumentSeprator {
 
     func seperator(data input: String, type: Character) -> [[String]] {
         var output: [[String]] = [] // 2D array
-        var rawDatas = tokenizer.wordSeperator(input)
+        let rawDatas = tokenizer.wordSeperator(input)
         var counter = -1
 
         if type == "d" {

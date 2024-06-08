@@ -17,7 +17,7 @@
 import Foundation
 
 class LexiconModel {
-    private var fileReader = FileReader()
+    private var fileMgr = FileMgr()
     private var tokenizer = Tokenizer()
 
     private var fileURL: URL?
@@ -74,14 +74,14 @@ class LexiconModel {
     /// fetches content file and puts it inside content
     func fetchContent() {
         if let URL = fileURL {
-            content = fileReader.readFile(fileURL: URL)
+            content = fileMgr.readFile(fileURL: URL)
         }
     }
 
     /// fetches stopword file and puts it inside stopWord
     func fetchSW() {
         if let URL = stopWordURL {
-            stopWord = fileReader.readFile(fileURL: URL)
+            stopWord = fileMgr.readFile(fileURL: URL)
             tokenizer.setStopWord(string: stopWord!)
         }
     }
@@ -128,11 +128,11 @@ class LexiconModel {
 
         DispatchQueue.global().async {
             if let URL = self.fileURL {
-                content = self.fileReader.readFile(fileURL: URL)
+                content = self.fileMgr.readFile(fileURL: URL)
             }
 
             if let URL = self.stopWordURL {
-                stopWord = self.fileReader.readFile(fileURL: URL)
+                stopWord = self.fileMgr.readFile(fileURL: URL)
                 self.tokenizer.setStopWord(string: stopWord!)
             }
         }
