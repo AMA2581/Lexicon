@@ -76,7 +76,7 @@ struct FileMgr {
 
         do {
             let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
-            let fileURL = path.appendingPathComponent("trainedData.txt")
+            let fileURL = path.appendingPathComponent("trainedData.ama25")
             try writeStr.write(to: fileURL, atomically: true, encoding: .utf8)
         } catch {
             fatalError("\(error)")

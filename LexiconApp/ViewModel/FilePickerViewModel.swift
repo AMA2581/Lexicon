@@ -35,7 +35,9 @@ class FilePickerViewModel: NSObject, ObservableObject {
     func pickDocument(isSW: Bool) {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
-        panel.allowedFileTypes = ["txt", "", "all"] // Adjust for file types
+        // only file that is acceptible is a .ama25 file that has to be created using Lexicon binary
+        // or being provided by valuable source
+        panel.allowedFileTypes = ["ama25"] // Adjust for file types
 
         panel.beginSheetModal(for: .init()) { _ in
 //            print(panel.url)

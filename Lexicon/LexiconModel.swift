@@ -115,46 +115,7 @@ class LexiconModel {
         }
     }
 
-    func start() {
-        let documentSeperator = DocumentSeprator()
-        let termFreq = TermFreq()
-        let idfObj = IDF()
-
-        var content: String?
-        var stopWord: String?
-        var tokens: [Token] = []
-        var seperatedDoc: [[String]] = []
-        isRunning = true
-
-        DispatchQueue.global().async {
-            if let URL = self.fileURL {
-                content = self.fileMgr.readFile(fileURL: URL)
-            }
-
-            if let URL = self.stopWordURL {
-                stopWord = self.fileMgr.readFile(fileURL: URL)
-                self.tokenizer.setStopWord(string: stopWord!)
-            }
-        }
-
-        // DO NOT MAKE THIS CONCURRENT
-        // IT WILL RUIN THE PYTHONKIT AND IT
-        // WON'T WORK
-        if let safeContent = content {
-            tokens = tokenizer.dataTokenizer(data: safeContent)
-            seperatedDoc = documentSeperator.seperator(data: safeContent, type: "d")
-        }
-
-        DispatchQueue.global().async {
-            let makeDic = MakeDictionary(tokens: tokens)
-            let dictionary = makeDic.freqDictionary()
-
-            let freq = termFreq.termFrequency(seperatedDocument: seperatedDoc, dictionary: dictionary)
-            self.tf = termFreq.calcTF(termFrequency: freq)
-            let df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-            self.idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
-            self.tfIdf = idfObj.tfIdf(tf: self.tf, idf: self.idf)
-            self.isRunning = false
-        }
+    func getTrainedData(url: URL) {
+        var trainedData = fileMgr.readFile(fileURL: url)
     }
 }
