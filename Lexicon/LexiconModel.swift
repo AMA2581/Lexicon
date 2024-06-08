@@ -28,12 +28,6 @@ class LexiconModel {
     let termFreq = TermFreq()
     let idfObj = IDF()
 
-    var content: String?
-    var stopWord: String?
-    var tokens: [Token] = []
-    var seperatedDoc: [[String]] = []
-    var makeDic: MakeDictionary?
-    var dictionary: [String: Int] = [:]
     var tfIdf: [String: [DocItem]] = [:]
 
     func setFile(fileURL: URL) {
@@ -44,10 +38,44 @@ class LexiconModel {
         fileURL = URL(string: fileString)
     }
 
+    func isFileUrlNil() -> Bool {
+        if fileURL == nil {
+            return true
+        } else {
+            return false
+        }
+    }
+
     func getTrainedData() {
-        var tdProcessor = TDProcessor()
-        var trainedData = fileMgr.readFile(fileURL: fileURL!)
-        
+        let tdProcessor = TDProcessor()
+        let trainedData = fileMgr.readFile(fileURL: fileURL!)
+
         tfIdf = tdProcessor.TDProcessor(trainedData: trainedData)
+    }
+
+    func search(input: String) {
+        var inputTokens = tokenizer.dataTokenizer(data: input)
+        var inputSeperated = documentSeperator.seperator(data: input,
+                                                         type: "q")
+        var inputMakeDic = MakeDictionary(tokens: inputTokens)
+        var inputDic = inputMakeDic.freqDictionary()
+        var inputTFIDF = getInputTFIDF(seperatedDoc: inputSeperated,
+                                       dictionary: inputDic)
+        
+        
+    }
+
+    private func getInputTFIDF(seperatedDoc: [[String]],
+                               dictionary: [String: Int]) -> [String: [Double]] {
+        var inputTermFreq = termFreq.termFrequency(seperatedDocument: seperatedDoc,
+                                                   dictionary: dictionary)
+        var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
+        var inputDF = idfObj.df(seperatedDocument: seperatedDoc,
+                                dictionary: dictionary)
+        var inputIDF = idfObj.idf(df: inputDF,
+                                  documentCount: seperatedDoc.count)
+        var inputTFIDF = idfObj.tfIdf(tf: inputTF,
+                                      idf: inputIDF)
+        return inputTFIDF
     }
 }

@@ -21,6 +21,20 @@ class LexiconManager: ObservableObject {
 
     var delegate: LexiconManagerDelegate?
 
-    
+    func setFile(fileURL: URL) {
+        model.setFile(fileURL: fileURL)
+        model.getTrainedData()
+    }
 
+    func setFile(fileString: String) {
+        model.setFile(fileString: fileString)
+    }
+
+    func isFileUrlNil() -> Bool {
+        return model.isFileUrlNil()
+    }
+    
+    func search(input: String) {
+        
+    }
 }

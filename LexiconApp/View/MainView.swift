@@ -18,13 +18,27 @@ import AppKit
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject private var lexiconManager: LexiconManager
     @StateObject private var viewModel = LexiconModelView()
-    
+    @State private var input = ""
+
     var body: some View {
         NavigationStack {
-            FilePickerView()
-                .environmentObject(lexiconManager)
+            if viewModel.manager.isFileUrlNil() {
+                Button("pick trained file") {
+                    viewModel.pickDocument()
+                }
+            } else if viewModel.isLoading {
+                Text("Loading trained data...")
+            } else if !viewModel.isLoading {
+                HStack(spacing: 10.0) {
+                    TextField("Search", text: $input)
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "magnifyingglass")
+                    }
+                }
+            }
         }
         .padding(.all, 25)
     }

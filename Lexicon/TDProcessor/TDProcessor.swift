@@ -19,7 +19,7 @@ import Foundation
 class TDProcessor {
     var tokenizer = Tokenizer() // just to use the same word seperator logic
     var typeFlag = TDType.term
-    var isDocNum = false
+    var isDocNum = true
     
     func TDProcessor(trainedData input: String) -> [String: [DocItem]] {
         var output: [String: [DocItem]] = [:]
@@ -31,23 +31,26 @@ class TDProcessor {
         
         
         for td in seperatedTDs {
-            if tokenizer.tokenProceessor.prefixCheck(td) {
-                typeCheck(td)
-            } else if typeFlag == .term {
-                if !bufferDocItem.isEmpty {
-                    output[bufferTerm] = bufferDocItem
-                    bufferDocItem = []
-                }
-                bufferTerm = td
-            } else if typeFlag == .document {
-                if td == "=" {
-                    isDocNum = false
-                } else if isDocNum {
-                    bufferDocNum = Int(td)!
-                } else if !isDocNum {
-                    bufferDocRes = Double(td)!
-                    bufferDocItem.append(DocItem(key: bufferDocNum,
-                                                 value: bufferDocRes))
+            if td != "" {
+                if tokenizer.tokenProceessor.prefixCheck(td) {
+                    typeCheck(td)
+                } else if typeFlag == .term {
+                    if !bufferDocItem.isEmpty {
+                        output[bufferTerm] = bufferDocItem
+                        bufferDocItem = []
+                    }
+                    bufferTerm = td
+                } else if typeFlag == .document {
+                    if td == "=" {
+                        isDocNum = false
+                    } else if isDocNum {
+                        bufferDocNum = Int(td)!
+                    } else if !isDocNum {
+                        bufferDocRes = Double(td)!
+                        bufferDocItem.append(DocItem(key: bufferDocNum,
+                                                     value: bufferDocRes))
+                        isDocNum = true
+                    }
                 }
             }
         }
