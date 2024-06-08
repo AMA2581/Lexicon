@@ -57,7 +57,7 @@ var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
 var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
-fileMgr.writeTrainedTxtFile(dictionary: tfIdf, url: URL(string: "/Users/ama25/Documents/Side_Projects/Lexicon/Lexicon/trainedData/"))
+fileMgr.writeTrainedTxtFile(dictionary: tfIdf)
 print("-------------------------------")
 print("|                             |")
 print("|            Done!            |")

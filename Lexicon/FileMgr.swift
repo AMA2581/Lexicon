@@ -60,7 +60,7 @@ struct FileMgr {
         return out
     }
 
-    func writeTrainedTxtFile(dictionary: [String: [Double]], url: URL?) {
+    func writeTrainedTxtFile(dictionary: [String: [Double]]) {
         let fileManager = FileManager.default
         var writeStr = ""
         for dic in dictionary {
