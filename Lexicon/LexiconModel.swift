@@ -53,7 +53,7 @@ class LexiconModel {
         tfIdf = tdProcessor.TDProcessor(trainedData: trainedData)
     }
 
-    func search(input: String) {
+    func search(input: String) -> [DocItem] {
         let inputTokens = tokenizer.dataTokenizer(data: input)
         let inputSeperated = documentSeperator.seperator(data: input,
                                                          type: "q")
@@ -68,6 +68,13 @@ class LexiconModel {
         
         var sortObj = Sort()
         var sortedCosine = sortObj.mergeSort(list: cosine)
+        var output: [DocItem] = []
+        
+        for i in 0 ..< 5 {
+            output.append(sortedCosine[i])
+        }
+        
+        return output
     }
 
     private func getInputTFIDF(seperatedDoc: [[String]],

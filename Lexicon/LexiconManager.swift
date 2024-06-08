@@ -18,6 +18,7 @@ import Foundation
 
 class LexiconManager: ObservableObject {
     var model = LexiconModel()
+    var results: [DocItem] = []
 
     var delegate: LexiconManagerDelegate?
 
@@ -35,6 +36,6 @@ class LexiconManager: ObservableObject {
     }
     
     func search(input: String) {
-        
+        results = model.search(input: input)
     }
 }

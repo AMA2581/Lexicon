@@ -20,6 +20,7 @@ import Foundation
 class LexiconModelView: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     @Published private(set) var isLoading = false
+    @Published private(set) var isSearching = false
     var manager = LexiconManager()
 
     func pickDocument() {
@@ -41,6 +42,10 @@ class LexiconModelView: ObservableObject {
     }
     
     func search(input: String) {
-        
+        isSearching = true
+        DispatchQueue.global().async {
+            self.manager.search(input: input)
+            self.isSearching = false
+        }
     }
 }

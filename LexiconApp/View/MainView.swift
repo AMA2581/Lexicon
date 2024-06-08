@@ -28,16 +28,28 @@ struct MainView: View {
                     viewModel.pickDocument()
                 }
             } else if viewModel.isLoading {
-                Text("Loading trained data...")
+                VStack(spacing: 15.0) {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                    Text("Loading trained data...")
+                }
             } else if !viewModel.isLoading {
                 HStack(spacing: 10.0) {
                     TextField("Search", text: $input)
                     Button {
-                        
+                        viewModel.search(input: input)
                     } label: {
                         Image(systemName: "magnifyingglass")
                     }
                 }
+            } else if viewModel.isSearching {
+                VStack(spacing: 15.0) {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                    Text("Searching...")
+                }
+            } else if !viewModel.isSearching {
+                Text("done searching")
             }
         }
         .padding(.all, 25)
