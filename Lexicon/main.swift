@@ -59,7 +59,10 @@ var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
 fileMgr.writeTrainedTxtFile(dictionary: tfIdf, url: URL(string: "/Users/ama25/Documents/Side_Projects/Lexicon/Lexicon/trainedData/"))
 print("-------------------------------")
-print("Done!")
+print("|                             |")
+print("|            Done!            |")
+print("|                             |")
+print("-------------------------------")
 
 // MARK: Input
 //let tempInput = "Numerical Solution of the Polynomial Equation" // .I 44 query
