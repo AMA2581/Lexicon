@@ -33,7 +33,7 @@ struct MainView: View {
                         .progressViewStyle(CircularProgressViewStyle())
                     Text("Loading trained data...")
                 }
-            } else if !viewModel.isLoading {
+            } else if !viewModel.isLoading && !viewModel.isDoneSearching {
                 HStack(spacing: 10.0) {
                     TextField("Search", text: $input)
                     Button {
@@ -42,13 +42,7 @@ struct MainView: View {
                         Image(systemName: "magnifyingglass")
                     }
                 }
-            } else if viewModel.isSearching {
-                VStack(spacing: 15.0) {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                    Text("Searching...")
-                }
-            } else if !viewModel.isSearching {
+            } else if !viewModel.isLoading && viewModel.isDoneSearching {
                 Text("done searching")
             }
         }
