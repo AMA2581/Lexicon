@@ -117,5 +117,6 @@ class LexiconModel {
 
     func getTrainedData(url: URL) {
         var trainedData = fileMgr.readFile(fileURL: url)
+        
     }
 }

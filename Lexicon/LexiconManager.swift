@@ -16,7 +16,7 @@
 
 import Foundation
 
-class LexiconManager {
+class LexiconManager: ObservableObject {
     var model = LexiconModel()
 
     var delegate: LexiconManagerDelegate?
@@ -45,72 +45,4 @@ class LexiconManager {
         return model.isSWNil()
     }
 
-    // TODO: add proper start function and also give access to this object to change variables in Model.
-    // TODO: add delegate
-    // TODO: add proper logging system
-
-    func startTraining() {
-        delegate?.didStartTraining(self, model: model)
-
-        model.fetchContent()
-        // making sure it went without errors
-        if model.content != nil {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("Couldn't fetch content"))
-        }
-
-        model.fetchSW()
-        if model.stopWord != nil {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("Couldn't fetch stopword"))
-        }
-
-        // DO NOT MAKE THIS CONCURRENT
-        // IT WILL RUIN THE PYTHONKIT AND IT
-        // WON'T WORK
-
-        model.fetchTokens()
-        if !model.tokens.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't tokenize"))
-        }
-        if !model.seperatedDoc.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't seperate documents"))
-        }
-
-        model.fetchDictionary()
-        if !model.dictionary.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't make frequency dictionary"))
-        }
-
-        model.fetchTF()
-        if !model.tf.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't make TF"))
-        }
-
-        model.fetchIDF()
-        if !model.idf.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't make IDF"))
-        }
-
-        model.fetchTFIDF()
-        if !model.tfIdf.isEmpty {
-            delegate?.didUpdate(self, model: model)
-        } else {
-            delegate?.didFail(error: fatalError("couldn't make TFIDF"))
-        }
-
-        delegate?.didFinishTraining(self, model: model)
-    }
 }

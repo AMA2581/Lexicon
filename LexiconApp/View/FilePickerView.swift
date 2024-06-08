@@ -21,32 +21,8 @@ struct FilePickerView: View {
     @StateObject private var viewModel = FilePickerViewModel()
 
     var body: some View {
-         if !viewModel.isTraining && !viewModel.isDoneTraining {
-            VStack {
-                Button("Pick File") {
-                    viewModel.pickDocument(isSW: false)
-                }
-                if !viewModel.isFileNil() {
-                    //            Text("Selected file: \(url.lastPathComponent)")
-                    Button("Pick Stop Word File") {
-                        viewModel.pickDocument(isSW: true)
-                    }
-                    
-                    if !viewModel.isSWNil() {
-                        Button("Start") {
-                            viewModel.start()
-                        }
-                    }
-                }
-            }
-        } else if viewModel.isTraining && !viewModel.isDoneTraining {
-            Text("Running...")
-        } else {
-            ScrollView {
-                HStack {
-                    Text("done")              
-                }
-            }
+        Button("pick trained file") {
+            viewModel.pickDocument()
         }
     }
 }

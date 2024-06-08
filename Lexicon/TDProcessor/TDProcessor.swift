@@ -13,22 +13,8 @@
 //
 // You should have received a copy of the GNU General Public License along
 // with this program;
+import Foundation
 
-import AppKit
-import SwiftUI
-
-struct MainView: View {
-    @EnvironmentObject private var lexiconManager: LexiconManager
+class TDProcessor {
     
-    var body: some View {
-        NavigationStack {
-            // TODO: add swiftUI for tf and idf and ifidf
-            FilePickerView()
-        }
-        .padding(.all, 25)
-    }
-}
-
-#Preview {
-    MainView()
 }

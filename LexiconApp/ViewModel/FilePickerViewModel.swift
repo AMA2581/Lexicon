@@ -32,7 +32,7 @@ class FilePickerViewModel: NSObject, ObservableObject {
         manager.delegate = self
     }
 
-    func pickDocument(isSW: Bool) {
+    func pickDocument() {
         let panel = NSOpenPanel()
         panel.allowsMultipleSelection = false
         // only file that is acceptible is a .ama25 file that has to be created using Lexicon binary
@@ -42,11 +42,7 @@ class FilePickerViewModel: NSObject, ObservableObject {
         panel.beginSheetModal(for: .init()) { _ in
 //            print(panel.url)
             self.selectedFileURL = panel.url
-            if isSW {
-                self.saveSWUrl()
-            } else {
-                self.saveFileUrl()
-            }
+            self.saveFileUrl()
         }
     }
 

@@ -18,9 +18,12 @@ import SwiftUI
 
 @main
 struct LexiconAppApp: App {
+    @StateObject var lexiconManager = LexiconManager()
+    
     var body: some Scene {
         WindowGroup {
             MainView()
+                .environmentObject(lexiconManager)
         }
         
     }
