@@ -20,7 +20,7 @@ struct CardSubView: View {
             VStack(alignment: .leading) {
                 if title != nil {
                     Text(title!)
-                        .font(.system(size: 30, weight: .bold))
+                        .font(.system(size: 25, weight: .bold))
                         .lineLimit(3)
                 }
                 HStack {

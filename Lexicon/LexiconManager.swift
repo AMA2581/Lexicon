@@ -19,6 +19,7 @@ import Foundation
 class LexiconManager: ObservableObject {
     var model = LexiconModel()
     var results: [DocItem] = []
+    var cardItems: [CardItem] = []
 
     var delegate: LexiconManagerDelegate?
 
@@ -37,5 +38,9 @@ class LexiconManager: ObservableObject {
     
     func search(input: String) {
         results = model.search(input: input)
+    }
+    
+    func fetchResultDocuments() {
+        cardItems = model.fetchResultDocuments(docItem: results)
     }
 }

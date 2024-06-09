@@ -33,7 +33,9 @@ struct MainView: View {
                         .progressViewStyle(CircularProgressViewStyle())
                     Text("Loading trained data...")
                 }
-            } else if !viewModel.isLoading && !viewModel.isDoneSearching {
+            } else if !viewModel.isLoading
+                && !viewModel.isDoneSearching
+                && !viewModel.isSearching {
                 VStack(spacing: 10.0) {
                     TextField("Search", text: $input)
                     Button {
@@ -45,8 +47,25 @@ struct MainView: View {
                         }
                     }
                 }
-            } else if !viewModel.isLoading && viewModel.isDoneSearching {
-                Text(viewModel.fetchResults())
+            } else if !viewModel.isLoading
+                && !viewModel.isDoneSearching
+                && viewModel.isSearching {
+                VStack(spacing: 15.0) {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                    Text("Searching...")
+                }
+            } else if !viewModel.isLoading
+                && viewModel.isDoneSearching
+                && !viewModel.isSearching {
+                ScrollView {
+                    ForEach(0 ..< viewModel.fetchCards().count, id: \.self) { index in
+                        CardSubView(title: viewModel.fetchCards()[index].title,
+                                    author: viewModel.fetchCards()[index].author,
+                                    index: viewModel.fetchCards()[index].index,
+                                    text: viewModel.fetchCards()[index].text)
+                    }
+                }
             }
         }
         .padding(.all, 25)

@@ -20,6 +20,7 @@ import Foundation
 class LexiconModelView: ObservableObject {
     @Published private(set) var selectedFileURL: URL?
     @Published private(set) var isLoading = false
+    @Published private(set) var isSearching = false
     @Published private(set) var isDoneSearching = false
     var manager = LexiconManager()
 
@@ -29,7 +30,7 @@ class LexiconModelView: ObservableObject {
         panel.allowsMultipleSelection = false
         // only file that is acceptible is a .ama25 file that has to be created using Lexicon binary
         // or being provided by valuable source
-        panel.allowedFileTypes = ["ama25"] // Adjust for file types
+        panel.allowedFileTypes = ["ama25"] // Don't adjust for other file types or it won't work
 
         panel.beginSheetModal(for: .init()) { _ in
 //            print(panel.url)
@@ -42,8 +43,17 @@ class LexiconModelView: ObservableObject {
     }
 
     func search(input: String) {
+        isSearching = true
         manager.search(input: input)
-        isDoneSearching = true
+        DispatchQueue.global().async {
+            self.manager.fetchResultDocuments()
+            self.isSearching = false
+            self.isDoneSearching = true
+        }
+    }
+    
+    func fetchCards() -> [CardItem] {
+        return manager.cardItems
     }
     
     func fetchResults() -> String {
