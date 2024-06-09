@@ -7,22 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
+		2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
+		2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
+		2E058B262C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
+		2E058B272C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
+		2E0ECF952BD7C2FD0068048C /* FileMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileMgr.swift */; };
 		2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
 		2E1EAFDD2BE212AE00227503 /* PythonKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2E1EAFDC2BE212AE00227503 /* PythonKit */; };
-		2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */; };
-		2E1EAFE12BE244C500227503 /* FilePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */; };
-		2E1EAFE32BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
-		2E1EAFE42BE24D3600227503 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* Model.swift */; };
+		2E1EAFE12BE244C500227503 /* LexiconModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE02BE244C500227503 /* LexiconModelView.swift */; };
+		2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
+		2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
+		2E3A87432C15719400DE62D3 /* CardSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A87422C15719400DE62D3 /* CardSubView.swift */; };
+		2E4C12CB2C1578FB000032A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C12CA2C1578FB000032A7 /* CardItem.swift */; };
+		2E4C12CC2C1578FB000032A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C12CA2C1578FB000032A7 /* CardItem.swift */; };
+		2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
+		2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
+		2E545AB82C09212100031B23 /* DocItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E545AB72C09212100031B23 /* DocItem.swift */; };
 		2E5F48932BD699A800C7A62F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5F48922BD699A800C7A62F /* main.swift */; };
 		2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
 		2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */; };
+		2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
+		2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390602C09D4FC005C0D8D /* CMath.swift */; };
+		2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390642C0B0B98005C0D8D /* InputProcessor.swift */; };
+		2E8390662C0B0B98005C0D8D /* InputProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8390642C0B0B98005C0D8D /* InputProcessor.swift */; };
 		2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */; };
 		2E88BB992BE1585F0066C106 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB982BE1585F0066C106 /* Assets.xcassets */; };
 		2E88BB9C2BE1585F0066C106 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */; };
 		2E8CBF2C2BF09763005F0CF4 /* TermFreq.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8CBF2B2BF09763005F0CF4 /* TermFreq.swift */; };
+		2EA1547C2C14C4DF00E8D1F0 /* TDProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1547B2C14C4DF00E8D1F0 /* TDProcessor.swift */; };
+		2EA1547D2C14C4EF00E8D1F0 /* TDProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1547B2C14C4DF00E8D1F0 /* TDProcessor.swift */; };
+		2EA1547F2C14C60A00E8D1F0 /* TDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1547E2C14C60A00E8D1F0 /* TDType.swift */; };
+		2EA154802C14C7BC00E8D1F0 /* TDType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1547E2C14C60A00E8D1F0 /* TDType.swift */; };
 		2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1E4492BE20FB80047C41E /* MainView.swift */; };
-		2EA1E4502BE212310047C41E /* FileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileReader.swift */; };
+		2EA1E4502BE212310047C41E /* FileMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileMgr.swift */; };
 		2EA1E4512BE212350047C41E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF9E2BD7F6880068048C /* Token.swift */; };
 		2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
@@ -36,6 +53,7 @@
 		2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9A2BD90B7B00FEE478 /* Tokenizer.swift */; };
 		2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9C2BD90B9C00FEE478 /* TokenProcessor.swift */; };
 		2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF10D9E2BD90C3900FEE478 /* TokenType.swift */; };
+		2EF6AA072C14927200B86DED /* DocItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E545AB72C09212100031B23 /* DocItem.swift */; };
 		2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB4A772BF0D87900E7BB88 /* IDF.swift */; };
 		2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB517F2BEFCC51000DA516 /* DocumentSeprator.swift */; };
 		2EFB51812BEFCEC0000DA516 /* DocumentSeprator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EFB517F2BEFCC51000DA516 /* DocumentSeprator.swift */; };
@@ -54,7 +72,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E0ECF942BD7C2FD0068048C /* FileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileReader.swift; sourceTree = "<group>"; };
+		2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManagerDelegate.swift; sourceTree = "<group>"; };
+		2E058B252C051761009323B4 /* LexiconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManager.swift; sourceTree = "<group>"; };
+		2E0ECF942BD7C2FD0068048C /* FileMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMgr.swift; sourceTree = "<group>"; };
 		2E0ECF962BD7C9500068048C /* cacm.all */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cacm.all; sourceTree = "<group>"; };
 		2E0ECF972BD7C9500068048C /* cite.info */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cite.info; sourceTree = "<group>"; };
 		2E0ECF982BD7C9500068048C /* common_words */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = common_words; sourceTree = "<group>"; };
@@ -62,19 +82,26 @@
 		2E0ECF9A2BD7C9500068048C /* query.text */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = query.text; sourceTree = "<group>"; };
 		2E0ECF9B2BD7C9500068048C /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		2E0ECF9E2BD7F6880068048C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
-		2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerView.swift; sourceTree = "<group>"; };
-		2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilePickerViewModel.swift; sourceTree = "<group>"; };
-		2E1EAFE22BE24D3600227503 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2E1EAFE02BE244C500227503 /* LexiconModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModelView.swift; sourceTree = "<group>"; };
+		2E1EAFE22BE24D3600227503 /* LexiconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModel.swift; sourceTree = "<group>"; };
+		2E3A87422C15719400DE62D3 /* CardSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubView.swift; sourceTree = "<group>"; };
+		2E4C12CA2C1578FB000032A7 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
+		2E51D26A2C0DEC6C009B8ADF /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
+		2E545AB72C09212100031B23 /* DocItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocItem.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		2E5F48902BD699A800C7A62F /* Lexicon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Lexicon; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5F48922BD699A800C7A62F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MakeDictionary.swift; sourceTree = "<group>"; };
+		2E8390602C09D4FC005C0D8D /* CMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMath.swift; sourceTree = "<group>"; };
+		2E8390642C0B0B98005C0D8D /* InputProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputProcessor.swift; sourceTree = "<group>"; };
 		2E88BB922BE1585D0066C106 /* LexiconApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LexiconApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E88BB942BE1585D0066C106 /* LexiconAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconAppApp.swift; sourceTree = "<group>"; };
 		2E88BB982BE1585F0066C106 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E88BB9B2BE1585F0066C106 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2E88BB9D2BE1585F0066C106 /* LexiconApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LexiconApp.entitlements; sourceTree = "<group>"; };
 		2E8CBF2B2BF09763005F0CF4 /* TermFreq.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermFreq.swift; sourceTree = "<group>"; };
+		2EA1547B2C14C4DF00E8D1F0 /* TDProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDProcessor.swift; sourceTree = "<group>"; };
+		2EA1547E2C14C60A00E8D1F0 /* TDType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDType.swift; sourceTree = "<group>"; };
 		2EA1E4492BE20FB80047C41E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2ED89CEE2BDE245700C44634 /* Stemmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stemmer.swift; sourceTree = "<group>"; };
 		2ED89CF12BDE24A900C44634 /* PyStemmer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PyStemmer.py; sourceTree = "<group>"; };
@@ -139,6 +166,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E4C12C92C1578D2000032A7 /* CardItem */ = {
+			isa = PBXGroup;
+			children = (
+				2E4C12CA2C1578FB000032A7 /* CardItem.swift */,
+			);
+			path = CardItem;
+			sourceTree = "<group>";
+		};
+		2E51D2692C0DEC56009B8ADF /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				2E51D26A2C0DEC6C009B8ADF /* Sort.swift */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		2E545AB62C09211100031B23 /* DocItem */ = {
+			isa = PBXGroup;
+			children = (
+				2E545AB72C09212100031B23 /* DocItem.swift */,
+			);
+			path = DocItem;
+			sourceTree = "<group>";
+		};
 		2E5F48762BD68C9800C7A62F = {
 			isa = PBXGroup;
 			children = (
@@ -165,12 +216,20 @@
 			children = (
 				2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */,
 				2E5F48922BD699A800C7A62F /* main.swift */,
-				2E1EAFE22BE24D3600227503 /* Model.swift */,
-				2E0ECF942BD7C2FD0068048C /* FileReader.swift */,
+				2E1EAFE22BE24D3600227503 /* LexiconModel.swift */,
+				2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */,
+				2E058B252C051761009323B4 /* LexiconManager.swift */,
+				2E0ECF942BD7C2FD0068048C /* FileMgr.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
+				2E4C12C92C1578D2000032A7 /* CardItem */,
+				2E83905F2C09D4E7005C0D8D /* CMath */,
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
+				2E545AB62C09211100031B23 /* DocItem */,
 				2EFB4A762BF0D84D00E7BB88 /* IDF */,
+				2E8390632C0B0B67005C0D8D /* InputProcessor */,
+				2E51D2692C0DEC56009B8ADF /* Sort */,
 				2ED89CF02BDE246300C44634 /* Stemmer */,
+				2EA1547A2C14C4C900E8D1F0 /* TDProcessor */,
 				2EFB517E2BEFCBD1000DA516 /* TF */,
 				2E0ECFA02BD7F6900068048C /* Token */,
 			);
@@ -183,6 +242,22 @@
 				2E618C192BE8CCF7003FDAD8 /* MakeDictionary.swift */,
 			);
 			path = Dictionary;
+			sourceTree = "<group>";
+		};
+		2E83905F2C09D4E7005C0D8D /* CMath */ = {
+			isa = PBXGroup;
+			children = (
+				2E8390602C09D4FC005C0D8D /* CMath.swift */,
+			);
+			path = CMath;
+			sourceTree = "<group>";
+		};
+		2E8390632C0B0B67005C0D8D /* InputProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				2E8390642C0B0B98005C0D8D /* InputProcessor.swift */,
+			);
+			path = InputProcessor;
 			sourceTree = "<group>";
 		};
 		2E88BB932BE1585D0066C106 /* LexiconApp */ = {
@@ -206,11 +281,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		2EA1547A2C14C4C900E8D1F0 /* TDProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				2EA1547B2C14C4DF00E8D1F0 /* TDProcessor.swift */,
+				2EA1547E2C14C60A00E8D1F0 /* TDType.swift */,
+			);
+			path = TDProcessor;
+			sourceTree = "<group>";
+		};
 		2EA1E44B2BE20FC40047C41E /* View */ = {
 			isa = PBXGroup;
 			children = (
 				2EA1E4492BE20FB80047C41E /* MainView.swift */,
-				2E1EAFDE2BE2134B00227503 /* FilePickerView.swift */,
+				2E3A87422C15719400DE62D3 /* CardSubView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -218,7 +302,7 @@
 		2EA1E44E2BE2117E0047C41E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				2E1EAFE02BE244C500227503 /* FilePickerViewModel.swift */,
+				2E1EAFE02BE244C500227503 /* LexiconModelView.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -349,16 +433,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA1547F2C14C60A00E8D1F0 /* TDType.swift in Sources */,
 				2E0ECF9F2BD7F6880068048C /* Token.swift in Sources */,
 				2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */,
 				2E8CBF2C2BF09763005F0CF4 /* TermFreq.swift in Sources */,
 				2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */,
+				2E4C12CB2C1578FB000032A7 /* CardItem.swift in Sources */,
 				2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */,
 				2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */,
+				2E058B262C051761009323B4 /* LexiconManager.swift in Sources */,
 				2E5F48932BD699A800C7A62F /* main.swift in Sources */,
 				2EFB4A782BF0D87900E7BB88 /* IDF.swift in Sources */,
-				2E1EAFE32BE24D3600227503 /* Model.swift in Sources */,
-				2E0ECF952BD7C2FD0068048C /* FileReader.swift in Sources */,
+				2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */,
+				2E0ECF952BD7C2FD0068048C /* FileMgr.swift in Sources */,
+				2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */,
+				2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
+				2EA1547C2C14C4DF00E8D1F0 /* TDProcessor.swift in Sources */,
+				2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
+				2E545AB82C09212100031B23 /* DocItem.swift in Sources */,
+				2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */,
 				2E618C1B2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
 				2ED89CEF2BDE245700C44634 /* Stemmer.swift in Sources */,
 			);
@@ -368,20 +461,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E1EAFE12BE244C500227503 /* FilePickerViewModel.swift in Sources */,
+				2E1EAFE12BE244C500227503 /* LexiconModelView.swift in Sources */,
 				2EFB51812BEFCEC0000DA516 /* DocumentSeprator.swift in Sources */,
+				2E4C12CC2C1578FB000032A7 /* CardItem.swift in Sources */,
 				2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */,
 				2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */,
 				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
 				2EE71BFA2BFCE77700CC4021 /* TermFreq.swift in Sources */,
-				2EA1E4502BE212310047C41E /* FileReader.swift in Sources */,
+				2EA1E4502BE212310047C41E /* FileMgr.swift in Sources */,
+				2EF6AA072C14927200B86DED /* DocItem.swift in Sources */,
 				2EA1E44A2BE20FB80047C41E /* MainView.swift in Sources */,
+				2EA154802C14C7BC00E8D1F0 /* TDType.swift in Sources */,
 				2EA1E4552BE212410047C41E /* Stemmer.swift in Sources */,
 				2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
+				2EA1547D2C14C4EF00E8D1F0 /* TDProcessor.swift in Sources */,
+				2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */,
+				2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
-				2E1EAFDF2BE2134B00227503 /* FilePickerView.swift in Sources */,
-				2E1EAFE42BE24D3600227503 /* Model.swift in Sources */,
+				2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */,
+				2E8390662C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
 				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
+				2E058B272C051761009323B4 /* LexiconManager.swift in Sources */,
+				2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */,
+				2E3A87432C15719400DE62D3 /* CardSubView.swift in Sources */,
 				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

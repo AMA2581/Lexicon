@@ -18,10 +18,10 @@ import SwiftUI
 
 @main
 struct LexiconAppApp: App {
+    
     var body: some Scene {
         WindowGroup {
             MainView()
         }
-        
     }
 }

@@ -37,12 +37,11 @@ class IDF {
         return output
     }
     
-    func idf(df datas: [String: Int]) -> [String: Double] {
+    func idf(df datas: [String: Int], documentCount n: Int) -> [String: Double] {
         var output: [String: Double] = [:]
-        let n = datas.count
         
         for data in datas {
-            output[data.key] = log10(Double(n)/Double(data.value)) // log10(n/df)
+            output[data.key] = log10(Double(n)/Double(data.value)) + 1 // log10(n/df)
         }
         
         return output

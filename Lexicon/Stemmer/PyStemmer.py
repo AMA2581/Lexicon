@@ -14,6 +14,7 @@
 # You should have received a copy of the GNU General Public License along
 # with this program;
 
+import sys
 from nltk.stem import PorterStemmer, SnowballStemmer
 
 def stemmer(str):

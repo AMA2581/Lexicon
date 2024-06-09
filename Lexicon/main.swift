@@ -16,20 +16,20 @@
 
 import Foundation
 
-var fileReader = FileReader()
+var fileMgr = FileMgr()
 var tokenizer = Tokenizer()
 
-let files = fileReader.fileUrlGetter(datasetFolderUrl: URL(string: "/Users/ama25/Documents/Lexicon/Lexicon/cacm/"))
-let content = fileReader.readFile(fileURL: files[1])
+let files = fileMgr.fileUrlGetter(datasetFolderUrl: URL(string: "/Users/ama25/Documents/Side_Projects/Lexicon/Lexicon/cacm/"))
+let content = fileMgr.readFile(fileURL: files[1])
 
-let stopWord = fileReader.readFile(fileURL: files[2])
+let stopWord = fileMgr.readFile(fileURL: files[2])
 tokenizer.setStopWord(string: stopWord)
 
 var tokens = tokenizer.dataTokenizer(data: content)
 var stemmer = Stemmer()
 
 var documentSeperator = DocumentSeprator()
-var seperatedDoc = documentSeperator.seperator(data: content)
+var seperatedDoc = documentSeperator.seperator(data: content, type: "d")
 
 //for doc in seperatedDoc {
 //    print(doc)
@@ -54,12 +54,41 @@ var tf = termFreq.calcTF(termFrequency: freq)
 
 var idfObj = IDF()
 var df = idfObj.df(seperatedDocument: seperatedDoc, dictionary: dictionary)
-var idf = idfObj.idf(df: df)
+var idf = idfObj.idf(df: df, documentCount: seperatedDoc.count)
 var tfIdf = idfObj.tfIdf(tf: tf, idf: idf)
 
-for fre in tfIdf {
-    print(fre.key)
-    print(fre.value)
-    print("-------------------------------")
-}
+fileMgr.writeTrainedTxtFile(dictionary: tfIdf)
+print("-------------------------------")
+print("|                             |")
+print("|            Done!            |")
+print("|                             |")
+print("-------------------------------")
+
+// MARK: Input
+//let tempInput = "Numerical Solution of the Polynomial Equation" // .I 44 query
+//
+//var inputTokens = tokenizer.dataTokenizer(data: tempInput)
+//var inputSeperated = documentSeperator.seperator(data: tempInput, type: "q")
+//var inputMakeDic = MakeDictionary(tokens: inputTokens)
+//var inputDic = inputMakeDic.freqDictionary()
+//
+//var inputTermFreq = termFreq.termFrequency(seperatedDocument: inputSeperated, dictionary: inputDic)
+//var inputTF = termFreq.calcTF(termFrequency: inputTermFreq)
+//
+//var inputDF = idfObj.df(seperatedDocument: inputSeperated, dictionary: inputDic)
+//var inputIDF = idfObj.idf(df: inputDF, documentCount: inputSeperated.count)
+//var inputTFIDF = idfObj.tfIdf(tf: inputTF, idf: inputIDF)
+//
+//var inputProcessor = InputProcessor()
+//var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, inputTFIDF: inputTFIDF)
+//
+//var sortObj = Sort()
+//var sortedCosine = sortObj.mergeSort(list: cosine)
+//
+//for fre in sortedCosine {
+//    print(fre.key)
+//    print(fre.value)
+////    print(fre)
+//    print("-------------------------------")
+//}
 //print(freq.count)

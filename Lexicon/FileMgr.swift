@@ -16,12 +16,11 @@
 
 import Foundation
 
-struct FileReader {
-    
+struct FileMgr {
     func fileUrlGetter(datasetFolderUrl DFURL: URL?) -> [URL] {
         let datasetFolderURL = DFURL
         var output: [URL] = []
-        
+
         do {
             if let datasetFolderURL {
                 let itemsInDirectory = try FileManager.default.contentsOfDirectory(at: datasetFolderURL, includingPropertiesForKeys: nil)
@@ -32,7 +31,7 @@ struct FileReader {
         } catch {
             fatalError("\(error)")
         }
-        
+
         return output
     }
 
@@ -47,17 +46,40 @@ struct FileReader {
             fatalError("\(error)")
         }
     }
-    
+
     func readFile(fileURL: URL) -> String {
         var out: String
-        
-        //reading
+
+        // reading
         do {
             out = try String(contentsOf: fileURL, encoding: .utf8)
         } catch {
             fatalError("\(error)")
         }
-        
+
         return out
+    }
+
+    func writeTrainedTxtFile(dictionary: [String: [Double]]) {
+        let fileManager = FileManager.default
+        var writeStr = ""
+        for dic in dictionary {
+            writeStr += ".T\n"
+            writeStr += "\(dic.key)\n"
+            writeStr += ".D\n"
+            var counter = 1
+            for doc in dic.value {
+                writeStr += "\(counter) = \(doc)\n"
+                counter += 1
+            }
+        }
+
+        do {
+            let path = try fileManager.url(for: .documentDirectory, in: .allDomainsMask, appropriateFor: nil, create: false)
+            let fileURL = path.appendingPathComponent("trainedData.ama25")
+            try writeStr.write(to: fileURL, atomically: true, encoding: .utf8)
+        } catch {
+            fatalError("\(error)")
+        }
     }
 }
