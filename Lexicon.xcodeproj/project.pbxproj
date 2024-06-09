@@ -18,6 +18,8 @@
 		2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
 		2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
 		2E3A87432C15719400DE62D3 /* CardSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A87422C15719400DE62D3 /* CardSubView.swift */; };
+		2E4C12CB2C1578FB000032A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C12CA2C1578FB000032A7 /* CardItem.swift */; };
+		2E4C12CC2C1578FB000032A7 /* CardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4C12CA2C1578FB000032A7 /* CardItem.swift */; };
 		2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
 		2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
 		2E545AB82C09212100031B23 /* DocItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E545AB72C09212100031B23 /* DocItem.swift */; };
@@ -83,6 +85,7 @@
 		2E1EAFE02BE244C500227503 /* LexiconModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModelView.swift; sourceTree = "<group>"; };
 		2E1EAFE22BE24D3600227503 /* LexiconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModel.swift; sourceTree = "<group>"; };
 		2E3A87422C15719400DE62D3 /* CardSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubView.swift; sourceTree = "<group>"; };
+		2E4C12CA2C1578FB000032A7 /* CardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItem.swift; sourceTree = "<group>"; };
 		2E51D26A2C0DEC6C009B8ADF /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		2E545AB72C09212100031B23 /* DocItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocItem.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -163,6 +166,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2E4C12C92C1578D2000032A7 /* CardItem */ = {
+			isa = PBXGroup;
+			children = (
+				2E4C12CA2C1578FB000032A7 /* CardItem.swift */,
+			);
+			path = CardItem;
+			sourceTree = "<group>";
+		};
 		2E51D2692C0DEC56009B8ADF /* Sort */ = {
 			isa = PBXGroup;
 			children = (
@@ -210,6 +221,7 @@
 				2E058B252C051761009323B4 /* LexiconManager.swift */,
 				2E0ECF942BD7C2FD0068048C /* FileMgr.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
+				2E4C12C92C1578D2000032A7 /* CardItem */,
 				2E83905F2C09D4E7005C0D8D /* CMath */,
 				2E618C1A2BE8CCF7003FDAD8 /* Dictionary */,
 				2E545AB62C09211100031B23 /* DocItem */,
@@ -426,6 +438,7 @@
 				2EF10D9D2BD90B9C00FEE478 /* TokenProcessor.swift in Sources */,
 				2E8CBF2C2BF09763005F0CF4 /* TermFreq.swift in Sources */,
 				2EF10D9B2BD90B7B00FEE478 /* Tokenizer.swift in Sources */,
+				2E4C12CB2C1578FB000032A7 /* CardItem.swift in Sources */,
 				2EF10D9F2BD90C3900FEE478 /* TokenType.swift in Sources */,
 				2EFB51802BEFCC51000DA516 /* DocumentSeprator.swift in Sources */,
 				2E058B262C051761009323B4 /* LexiconManager.swift in Sources */,
@@ -450,6 +463,7 @@
 			files = (
 				2E1EAFE12BE244C500227503 /* LexiconModelView.swift in Sources */,
 				2EFB51812BEFCEC0000DA516 /* DocumentSeprator.swift in Sources */,
+				2E4C12CC2C1578FB000032A7 /* CardItem.swift in Sources */,
 				2EA1E4542BE2123E0047C41E /* TokenType.swift in Sources */,
 				2EA1E4532BE2123B0047C41E /* TokenProcessor.swift in Sources */,
 				2E88BB952BE1585D0066C106 /* LexiconAppApp.swift in Sources */,
