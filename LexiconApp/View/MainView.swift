@@ -34,12 +34,15 @@ struct MainView: View {
                     Text("Loading trained data...")
                 }
             } else if !viewModel.isLoading && !viewModel.isDoneSearching {
-                HStack(spacing: 10.0) {
+                VStack(spacing: 10.0) {
                     TextField("Search", text: $input)
                     Button {
                         viewModel.search(input: input)
                     } label: {
-                        Image(systemName: "magnifyingglass")
+                        HStack(spacing: 10.0) {
+                            Image(systemName: "magnifyingglass")
+                            Text("Search")
+                        }
                     }
                 }
             } else if !viewModel.isLoading && viewModel.isDoneSearching {
