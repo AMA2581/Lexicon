@@ -70,8 +70,12 @@ class LexiconModel {
         let sortedCosine = sortObj.mergeSort(list: cosine)
         var output: [DocItem] = []
         
-        for i in 0 ..< 5 {
-            output.append(sortedCosine[i])
+        for item in sortedCosine {
+            if item.value == 0.0 {
+                break
+            } else {
+                output.append(item)
+            }
         }
         
         return output
