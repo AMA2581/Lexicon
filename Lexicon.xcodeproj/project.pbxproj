@@ -17,6 +17,7 @@
 		2E1EAFE12BE244C500227503 /* LexiconModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE02BE244C500227503 /* LexiconModelView.swift */; };
 		2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
 		2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E1EAFE22BE24D3600227503 /* LexiconModel.swift */; };
+		2E3A87432C15719400DE62D3 /* CardSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E3A87422C15719400DE62D3 /* CardSubView.swift */; };
 		2E51D26B2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
 		2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E51D26A2C0DEC6C009B8ADF /* Sort.swift */; };
 		2E545AB82C09212100031B23 /* DocItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E545AB72C09212100031B23 /* DocItem.swift */; };
@@ -81,6 +82,7 @@
 		2E0ECF9E2BD7F6880068048C /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 		2E1EAFE02BE244C500227503 /* LexiconModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModelView.swift; sourceTree = "<group>"; };
 		2E1EAFE22BE24D3600227503 /* LexiconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconModel.swift; sourceTree = "<group>"; };
+		2E3A87422C15719400DE62D3 /* CardSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardSubView.swift; sourceTree = "<group>"; };
 		2E51D26A2C0DEC6C009B8ADF /* Sort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sort.swift; sourceTree = "<group>"; };
 		2E545AB72C09212100031B23 /* DocItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocItem.swift; sourceTree = "<group>"; };
 		2E5F48892BD694C400C7A62F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				2EA1E4492BE20FB80047C41E /* MainView.swift */,
+				2E3A87422C15719400DE62D3 /* CardSubView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -466,6 +469,7 @@
 				2EE71BFB2BFCE77C00CC4021 /* IDF.swift in Sources */,
 				2E058B272C051761009323B4 /* LexiconManager.swift in Sources */,
 				2E8390622C09D4FC005C0D8D /* CMath.swift in Sources */,
+				2E3A87432C15719400DE62D3 /* CardSubView.swift in Sources */,
 				2EA1E4512BE212350047C41E /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
