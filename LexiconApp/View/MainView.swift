@@ -43,7 +43,7 @@ struct MainView: View {
                     }
                 }
             } else if !viewModel.isLoading && viewModel.isDoneSearching {
-                Text("done searching")
+                Text(viewModel.fetchResults())
             }
         }
         .padding(.all, 25)

@@ -45,4 +45,12 @@ class LexiconModelView: ObservableObject {
         manager.search(input: input)
         isDoneSearching = true
     }
+    
+    func fetchResults() -> String {
+        var output = ""
+        for result in manager.results {
+            output += "\(result.key)\n"
+        }
+        return output
+    }
 }

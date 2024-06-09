@@ -63,11 +63,11 @@ class LexiconModel {
                                        dictionary: inputDic)
         
         let inputProcessor = InputProcessor()
-        var cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, 
+        let cosine = inputProcessor.getCosine(mainTFIDF: tfIdf, 
                                               inputTFIDF: inputTFIDF)
         
-        var sortObj = Sort()
-        var sortedCosine = sortObj.mergeSort(list: cosine)
+        let sortObj = Sort()
+        let sortedCosine = sortObj.mergeSort(list: cosine)
         var output: [DocItem] = []
         
         for i in 0 ..< 5 {
