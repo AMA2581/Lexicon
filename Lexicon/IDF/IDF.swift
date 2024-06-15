@@ -41,7 +41,7 @@ class IDF {
         var output: [String: Double] = [:]
         
         for data in datas {
-            output[data.key] = log10(Double(n)/Double(data.value)) + 1 // log10(n/df)
+            output[data.key] = log10(Double(n)/Double(data.value)) // log10(n/df)
         }
         
         return output
