@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
-		2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */; };
 		2E058B262C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
 		2E058B272C051761009323B4 /* LexiconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E058B252C051761009323B4 /* LexiconManager.swift */; };
 		2E0ECF952BD7C2FD0068048C /* FileMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0ECF942BD7C2FD0068048C /* FileMgr.swift */; };
@@ -72,7 +70,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManagerDelegate.swift; sourceTree = "<group>"; };
 		2E058B252C051761009323B4 /* LexiconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LexiconManager.swift; sourceTree = "<group>"; };
 		2E0ECF942BD7C2FD0068048C /* FileMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileMgr.swift; sourceTree = "<group>"; };
 		2E0ECF962BD7C9500068048C /* cacm.all */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cacm.all; sourceTree = "<group>"; };
@@ -217,7 +214,6 @@
 				2ED94DC62BDCFD2700E6CB12 /* Lexicon.entitlements */,
 				2E5F48922BD699A800C7A62F /* main.swift */,
 				2E1EAFE22BE24D3600227503 /* LexiconModel.swift */,
-				2E058B222C050D11009323B4 /* LexiconManagerDelegate.swift */,
 				2E058B252C051761009323B4 /* LexiconManager.swift */,
 				2E0ECF942BD7C2FD0068048C /* FileMgr.swift */,
 				2E0ECF9C2BD7C9500068048C /* cacm */,
@@ -447,7 +443,6 @@
 				2E1EAFE32BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2E0ECF952BD7C2FD0068048C /* FileMgr.swift in Sources */,
 				2E8390612C09D4FC005C0D8D /* CMath.swift in Sources */,
-				2E058B232C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2EA1547C2C14C4DF00E8D1F0 /* TDProcessor.swift in Sources */,
 				2E8390652C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
 				2E545AB82C09212100031B23 /* DocItem.swift in Sources */,
@@ -476,7 +471,6 @@
 				2E618C1C2BE8CCF7003FDAD8 /* MakeDictionary.swift in Sources */,
 				2EA1547D2C14C4EF00E8D1F0 /* TDProcessor.swift in Sources */,
 				2E51D26C2C0DEC6C009B8ADF /* Sort.swift in Sources */,
-				2E058B242C050D11009323B4 /* LexiconManagerDelegate.swift in Sources */,
 				2EA1E4522BE212380047C41E /* Tokenizer.swift in Sources */,
 				2E1EAFE42BE24D3600227503 /* LexiconModel.swift in Sources */,
 				2E8390662C0B0B98005C0D8D /* InputProcessor.swift in Sources */,
